@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A043B9F1FC338990024DA43 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A4E7AC71FB89229001D829A /* Nimble.framework */; };
+		4A043BA01FC338AC0024DA43 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A4E7B161FB892E0001D829A /* Alamofire.framework */; };
 		4A1A6B591FBAFC8200AE1B45 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A6B581FBAFC8200AE1B45 /* AccessToken.swift */; };
 		4A1A6B5B1FBAFCD000AE1B45 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A6B5A1FBAFCD000AE1B45 /* User.swift */; };
 		4A1A6B5C1FBAFCD400AE1B45 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A6B5A1FBAFCD000AE1B45 /* User.swift */; };
@@ -34,7 +36,6 @@
 		4A1A6B791FBB6A3F00AE1B45 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A6B761FBB6A3F00AE1B45 /* Location.swift */; };
 		4A1A6B7A1FBB6A3F00AE1B45 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A6B761FBB6A3F00AE1B45 /* Location.swift */; };
 		4A4E7B141FB892D6001D829A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A4E7B121FB892D6001D829A /* Alamofire.framework */; };
-		4A4E7B171FB892E0001D829A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A4E7B161FB892E0001D829A /* Alamofire.framework */; };
 		4A4E7B191FB893A5001D829A /* WiaSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A4E7B181FB893A5001D829A /* WiaSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A4E7B1A1FB893A5001D829A /* WiaSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A4E7B181FB893A5001D829A /* WiaSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A4E7B1B1FB893A5001D829A /* WiaSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A4E7B181FB893A5001D829A /* WiaSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -175,6 +176,7 @@
 				4A4E7B231FB8956D001D829A /* Alamofire.framework in Frameworks */,
 				4A7DF8501FC210CD0073B2B4 /* Alamofire.framework in Frameworks */,
 				4A4E7B241FB8956D001D829A /* Nimble.framework in Frameworks */,
+				4A043B9F1FC338990024DA43 /* Nimble.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,8 +185,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AC8CDD81FBA48BA00F4859F /* ObjectMapper.framework in Frameworks */,
+				4A043BA01FC338AC0024DA43 /* Alamofire.framework in Frameworks */,
 				4AC8CDD91FBA48BA00F4859F /* AlamofireObjectMapper.framework in Frameworks */,
-				4A4E7B171FB892E0001D829A /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
