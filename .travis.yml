@@ -1,0 +1,27 @@
+language: objective-c
+rvm:
+  - 2.4.1
+cache: bundler
+
+# Whitelist `master` branch as the only branch to build pushes for.
+branches:
+  only:
+    - master
+    - /^\d+\.\d+\.\d+(-(beta|alpha|RC)\d*)?/ # Regex to trigger builds for git tags so that we can deploy docs to gh-pages.
+matrix:
+  include:
+      # Xcode9
+    - osx_image: xcode9
+      env: SDK=iphonesimulator PLATFORM="iOS Simulator,name=iPhone 6s,OS=11.0" SCHEME=WiaSwift_iOS
+    - osx_image: xcode9
+      env: SDK=appletvsimulator PLATFORM="tvOS Simulator,name=Apple TV 1080p,OS=11.0" SCHEME=WiaSwift_tvOS
+    - osx_image: xcode9
+      env: SDK=macosx PLATFORM="OS X" SCHEME=WiaSwift_macOS
+    - osx_image: xcode9
+      env: SWIFT_BUILD=true
+
+before_install:
+ - chmod +x ./Scripts/travis-build-test.sh
+
+script:
+  - ./Scripts/travis-build-test.sh

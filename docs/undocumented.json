@@ -1,0 +1,229 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/conalllaverty/Projects/WiaSwift/Sources/WiaSwift/AccessToken.swift",
+      "line": 23,
+      "symbol": "AccessToken.init(map:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/conalllaverty/Projects/WiaSwift/Sources/WiaSwift/AccessToken.swift",
+      "line": 27,
+      "symbol": "AccessToken.mapping(map:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/conalllaverty/Projects/WiaSwift/Sources/WiaSwift/Client.swift",
+      "line": 16,
+      "symbol": "Wia.sharedInstance",
+      "symbol_kind": "source.lang.swift.decl.var.static",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/conalllaverty/Projects/WiaSwift/Sources/WiaSwift/Client.swift",
+      "line": 21,
+      "symbol": "Wia.appKey",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/conalllaverty/Projects/WiaSwift/Sources/WiaSwift/Client.swift",
+      "line": 22,
+      "symbol": "Wia.clientKey",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/conalllaverty/Projects/WiaSwift/Sources/WiaSwift/Client.swift",
+      "line": 23,
+      "symbol": "Wia.accessToken",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/conalllaverty/Projects/WiaSwift/Sources/WiaSwift/Client.swift",
+      "line": 24,
+      "symbol": "Wia.baseURL",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/conalllaverty/Projects/WiaSwift/Sources/WiaSwift/Client.swift",
+      "line": 25,
+      "symbol": "Wia.spaceId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/conalllaverty/Projects/WiaSwift/Sources/WiaSwift/Client.swift",
+      "line": 27,
+      "symbol": "Wia.init(appKey:clientKey:accessToken:baseURL:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/conalllaverty/Projects/WiaSwift/Sources/WiaSwift/Client.swift",
+      "line": 38,
+      "symbol": "Wia.reset()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/conalllaverty/Projects/WiaSwift/Sources/WiaSwift/Client.swift",
+      "line": 46,
+      "symbol": "Wia.retrieveSpace(id:onSuccess:onFailure:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/conalllaverty/Projects/WiaSwift/Sources/WiaSwift/Client.swift",
+      "line": 67,
+      "symbol": "Wia.listSpaces(limit:page:onSuccess:onFailure:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/conalllaverty/Projects/WiaSwift/Sources/WiaSwift/Client.swift",
+      "line": 92,
+      "symbol": "Wia.retrieveDevice(id:onSuccess:onFailure:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/conalllaverty/Projects/WiaSwift/Sources/WiaSwift/Client.swift",
+      "line": 112,
+      "symbol": "Wia.listDevices(spaceId:limit:page:onSuccess:onFailure:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/conalllaverty/Projects/WiaSwift/Sources/WiaSwift/Client.swift",
+      "line": 139,
+      "symbol": "Wia.retrieveUser(id:onSuccess:onFailure:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/conalllaverty/Projects/WiaSwift/Sources/WiaSwift/Client.swift",
+      "line": 159,
+      "symbol": "Wia.listUsers(spaceId:limit:page:onSuccess:onFailure:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/conalllaverty/Projects/WiaSwift/Sources/WiaSwift/Client.swift",
+      "line": 186,
+      "symbol": "Wia.loginUser(username:password:onSuccess:onFailure:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/conalllaverty/Projects/WiaSwift/Sources/WiaSwift/Client.swift",
+      "line": 216,
+      "symbol": "Wia.signupUser(fullName:username:password:onSuccess:onFailure:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/conalllaverty/Projects/WiaSwift/Sources/WiaSwift/Client.swift",
+      "line": 246,
+      "symbol": "Wia.logoutUser(onSuccess:onFailure:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/conalllaverty/Projects/WiaSwift/Sources/WiaSwift/Device.swift",
+      "line": 33,
+      "symbol": "Device.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/conalllaverty/Projects/WiaSwift/Sources/WiaSwift/Device.swift",
+      "line": 37,
+      "symbol": "Device.init(map:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/conalllaverty/Projects/WiaSwift/Sources/WiaSwift/Device.swift",
+      "line": 41,
+      "symbol": "Device.mapping(map:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/conalllaverty/Projects/WiaSwift/Sources/WiaSwift/Event.swift",
+      "line": 31,
+      "symbol": "Event.init(map:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/conalllaverty/Projects/WiaSwift/Sources/WiaSwift/Event.swift",
+      "line": 35,
+      "symbol": "Event.mapping(map:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/conalllaverty/Projects/WiaSwift/Sources/WiaSwift/Location.swift",
+      "line": 35,
+      "symbol": "Location.init(map:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/conalllaverty/Projects/WiaSwift/Sources/WiaSwift/Location.swift",
+      "line": 39,
+      "symbol": "Location.mapping(map:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/conalllaverty/Projects/WiaSwift/Sources/WiaSwift/Space.swift",
+      "line": 27,
+      "symbol": "Space.init(map:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/conalllaverty/Projects/WiaSwift/Sources/WiaSwift/Space.swift",
+      "line": 31,
+      "symbol": "Space.mapping(map:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/conalllaverty/Projects/WiaSwift/Sources/WiaSwift/User.swift",
+      "line": 33,
+      "symbol": "User.init(map:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/conalllaverty/Projects/WiaSwift/Sources/WiaSwift/User.swift",
+      "line": 37,
+      "symbol": "User.mapping(map:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/conalllaverty/Projects/WiaSwift/Sources/WiaSwift/WiaError.swift",
+      "line": 27,
+      "symbol": "WiaError.init(map:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/conalllaverty/Projects/WiaSwift/Sources/WiaSwift/WiaError.swift",
+      "line": 31,
+      "symbol": "WiaError.mapping(map:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/conalllaverty/Projects/WiaSwift"
+}
