@@ -9,7 +9,7 @@
 import Foundation
 import ObjectMapper
 
-/// A Device represents a user in Wia
+/// A User represents a user in Wia
 public class User: Mappable  {
     
     /// The ID of this User

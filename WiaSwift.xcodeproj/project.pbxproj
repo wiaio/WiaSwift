@@ -82,6 +82,14 @@
 		4AC8CDD51FBA48AB00F4859F /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC8CDD31FBA48AB00F4859F /* ObjectMapper.framework */; };
 		4AC8CDD81FBA48BA00F4859F /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC8CDD61FBA48BA00F4859F /* ObjectMapper.framework */; };
 		4AC8CDD91FBA48BA00F4859F /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC8CDD71FBA48BA00F4859F /* AlamofireObjectMapper.framework */; };
+		4ACDF3381FE04A8600DC80D6 /* Organisation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACDF3371FE04A8600DC80D6 /* Organisation.swift */; };
+		4ACDF3391FE04A8C00DC80D6 /* Organisation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACDF3371FE04A8600DC80D6 /* Organisation.swift */; };
+		4ACDF33A1FE04A8C00DC80D6 /* Organisation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACDF3371FE04A8600DC80D6 /* Organisation.swift */; };
+		4ACDF33B1FE04A8C00DC80D6 /* Organisation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACDF3371FE04A8600DC80D6 /* Organisation.swift */; };
+		4ACDF33D1FE04AD200DC80D6 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACDF33C1FE04AD200DC80D6 /* Owner.swift */; };
+		4ACDF33E1FE04BAB00DC80D6 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACDF33C1FE04AD200DC80D6 /* Owner.swift */; };
+		4ACDF33F1FE04BAB00DC80D6 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACDF33C1FE04AD200DC80D6 /* Owner.swift */; };
+		4ACDF3401FE04BAB00DC80D6 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACDF33C1FE04AD200DC80D6 /* Owner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -155,6 +163,8 @@
 		4AC8CDD31FBA48AB00F4859F /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/tvOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		4AC8CDD61FBA48BA00F4859F /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/watchOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		4AC8CDD71FBA48BA00F4859F /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = Carthage/Build/watchOS/AlamofireObjectMapper.framework; sourceTree = "<group>"; };
+		4ACDF3371FE04A8600DC80D6 /* Organisation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Organisation.swift; sourceTree = "<group>"; };
+		4ACDF33C1FE04AD200DC80D6 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* ClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -252,6 +262,8 @@
 				4A4E7A9C1FB88B83001D829A /* Space.swift */,
 				4A1A6B711FBB69C600AE1B45 /* Event.swift */,
 				4A1A6B761FBB6A3F00AE1B45 /* Location.swift */,
+				4ACDF3371FE04A8600DC80D6 /* Organisation.swift */,
+				4ACDF33C1FE04AD200DC80D6 /* Owner.swift */,
 			);
 			path = WiaSwift;
 			sourceTree = "<group>";
@@ -656,7 +668,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4AC8CDB21FB9B76F00F4859F /* Device.swift in Sources */,
+				4ACDF3381FE04A8600DC80D6 /* Organisation.swift in Sources */,
 				4A4E7B391FB89B89001D829A /* Space.swift in Sources */,
+				4ACDF33D1FE04AD200DC80D6 /* Owner.swift in Sources */,
 				4A1A6B771FBB6A3F00AE1B45 /* Location.swift in Sources */,
 				4A1A6B721FBB69C600AE1B45 /* Event.swift in Sources */,
 				4A4E7B331FB8977D001D829A /* Client.swift in Sources */,
@@ -683,7 +697,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A1A6B661FBAFDF400AE1B45 /* WiaError.swift in Sources */,
+				4ACDF33B1FE04A8C00DC80D6 /* Organisation.swift in Sources */,
 				4A1A6B5C1FBAFCD400AE1B45 /* User.swift in Sources */,
+				4ACDF3401FE04BAB00DC80D6 /* Owner.swift in Sources */,
 				4A1A6B7A1FBB6A3F00AE1B45 /* Location.swift in Sources */,
 				4A1A6B751FBB69C600AE1B45 /* Event.swift in Sources */,
 				4AC8CDB51FB9B76F00F4859F /* Device.swift in Sources */,
@@ -698,7 +714,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A1A6B681FBAFDF500AE1B45 /* WiaError.swift in Sources */,
+				4ACDF33A1FE04A8C00DC80D6 /* Organisation.swift in Sources */,
 				4A1A6B5D1FBAFCD500AE1B45 /* User.swift in Sources */,
+				4ACDF33F1FE04BAB00DC80D6 /* Owner.swift in Sources */,
 				4A1A6B791FBB6A3F00AE1B45 /* Location.swift in Sources */,
 				4A1A6B741FBB69C600AE1B45 /* Event.swift in Sources */,
 				4AC8CDB41FB9B76F00F4859F /* Device.swift in Sources */,
@@ -725,7 +743,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A1A6B671FBAFDF400AE1B45 /* WiaError.swift in Sources */,
+				4ACDF3391FE04A8C00DC80D6 /* Organisation.swift in Sources */,
 				4A1A6B5E1FBAFCD500AE1B45 /* User.swift in Sources */,
+				4ACDF33E1FE04BAB00DC80D6 /* Owner.swift in Sources */,
 				4A1A6B781FBB6A3F00AE1B45 /* Location.swift in Sources */,
 				4A1A6B731FBB69C600AE1B45 /* Event.swift in Sources */,
 				4AC8CDB31FB9B76F00F4859F /* Device.swift in Sources */,
