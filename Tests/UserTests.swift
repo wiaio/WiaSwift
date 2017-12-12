@@ -154,5 +154,23 @@ class UserTests: XCTestCase {
 
         waitForExpectations(timeout: 10.0, handler: nil)
     }
+    
+    func testRetrieveAndSetCurrentUser() {
+        let expectation = self.expectation(description: "Retrieve the currently authenticated user")
+        
+        UserTests.client.retrieveUser(id: "me", onSuccess: { user in
+            expect(user).to(beAKindOf(User.self))
+            expect(user.id).toNot(beNil())
+            UserTests.client.currentUser = user
+            expectation.fulfill()
+        }, onFailure: { error in
+            expect(error).to(beAKindOf(WiaError.self))
+            fail("Error status code \(error.status!)")
+            expectation.fulfill()
+        })
+        
+        waitForExpectations(timeout: 10.0, handler: nil)
+    }
+
 }
 

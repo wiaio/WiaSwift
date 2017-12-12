@@ -23,7 +23,8 @@ open class Wia {
     open var accessToken: String?
     open var baseURL: String
     open var spaceId: String?
-
+    open var currentUser: User?
+    
     public init(appKey: String? = nil,
          clientKey: String? = nil,
          accessToken: String? = nil,
