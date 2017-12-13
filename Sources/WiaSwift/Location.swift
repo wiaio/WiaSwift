@@ -24,12 +24,16 @@ public class Location: Mappable  {
     /// The longitude of this Location
     public var altitude: Double?
 
+    /// The timestamp of this Location
+    public var timestamp: Date?
+
     // Constructor
-    init(id: String? = nil, latitude: Double? = nil, longitude: Double? = nil, altitude: Double? = nil) {
+    init(id: String? = nil, latitude: Double? = nil, longitude: Double? = nil, altitude: Double? = nil, timestamp: Date? = nil) {
         self.id = id
         self.latitude = latitude
         self.longitude = longitude
         self.altitude = altitude
+        self.timestamp = timestamp
     }
     
     public required init?(map: Map){
@@ -41,5 +45,7 @@ public class Location: Mappable  {
         latitude <- map["latitude"]
         longitude <- map["longitude"]
         altitude <- map["altitude"]
+        timestamp <- (map["timestamp"], MilisecondDateTransform())
     }
 }
+

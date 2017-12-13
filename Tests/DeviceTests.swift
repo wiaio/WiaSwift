@@ -79,7 +79,7 @@ class DeviceTests: XCTestCase {
                 expect(error).to(beAKindOf(WiaError.self))
                 fail("Error status code \(error.status!)")
             })
-        }, onFailure: { error in
+//        }, onFailure: { error in
             expect(error).to(beAKindOf(WiaError.self))
             fail("Error status code \(error.status!)")
             expectation.fulfill()

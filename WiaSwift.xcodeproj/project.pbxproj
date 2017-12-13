@@ -35,6 +35,10 @@
 		4A1A6B781FBB6A3F00AE1B45 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A6B761FBB6A3F00AE1B45 /* Location.swift */; };
 		4A1A6B791FBB6A3F00AE1B45 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A6B761FBB6A3F00AE1B45 /* Location.swift */; };
 		4A1A6B7A1FBB6A3F00AE1B45 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A6B761FBB6A3F00AE1B45 /* Location.swift */; };
+		4A2859421FE1712800A60688 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2859411FE1712800A60688 /* Util.swift */; };
+		4A2859431FE1714400A60688 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2859411FE1712800A60688 /* Util.swift */; };
+		4A2859441FE1714400A60688 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2859411FE1712800A60688 /* Util.swift */; };
+		4A2859451FE1714400A60688 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2859411FE1712800A60688 /* Util.swift */; };
 		4A4E7B141FB892D6001D829A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A4E7B121FB892D6001D829A /* Alamofire.framework */; };
 		4A4E7B191FB893A5001D829A /* WiaSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A4E7B181FB893A5001D829A /* WiaSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A4E7B1A1FB893A5001D829A /* WiaSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A4E7B181FB893A5001D829A /* WiaSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -124,6 +128,7 @@
 		4A1A6B6D1FBB545400AE1B45 /* HelperUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperUtils.swift; sourceTree = "<group>"; };
 		4A1A6B711FBB69C600AE1B45 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		4A1A6B761FBB6A3F00AE1B45 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		4A2859411FE1712800A60688 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		4A4E7A9A1FB88B62001D829A /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		4A4E7A9C1FB88B83001D829A /* Space.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Space.swift; sourceTree = "<group>"; };
 		4A4E7A9F1FB88D1E001D829A /* WiaSwift_Info_iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = WiaSwift_Info_iOS.plist; path = "Supporting Files/WiaSwift_Info_iOS.plist"; sourceTree = "<group>"; };
@@ -255,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				4A4E7A9A1FB88B62001D829A /* Client.swift */,
+				4A2859411FE1712800A60688 /* Util.swift */,
 				4A1A6B641FBAFDF100AE1B45 /* WiaError.swift */,
 				4AC8CDB11FB9B76F00F4859F /* Device.swift */,
 				4A1A6B581FBAFC8200AE1B45 /* AccessToken.swift */,
@@ -550,7 +556,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0910;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Wia Technologies Limited";
 				TargetAttributes = {
 					4A4E7AA51FB88DAA001D829A = {
@@ -667,6 +673,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A2859421FE1712800A60688 /* Util.swift in Sources */,
 				4AC8CDB21FB9B76F00F4859F /* Device.swift in Sources */,
 				4ACDF3381FE04A8600DC80D6 /* Organisation.swift in Sources */,
 				4A4E7B391FB89B89001D829A /* Space.swift in Sources */,
@@ -696,6 +703,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A2859451FE1714400A60688 /* Util.swift in Sources */,
 				4A1A6B661FBAFDF400AE1B45 /* WiaError.swift in Sources */,
 				4ACDF33B1FE04A8C00DC80D6 /* Organisation.swift in Sources */,
 				4A1A6B5C1FBAFCD400AE1B45 /* User.swift in Sources */,
@@ -713,6 +721,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A2859441FE1714400A60688 /* Util.swift in Sources */,
 				4A1A6B681FBAFDF500AE1B45 /* WiaError.swift in Sources */,
 				4ACDF33A1FE04A8C00DC80D6 /* Organisation.swift in Sources */,
 				4A1A6B5D1FBAFCD500AE1B45 /* User.swift in Sources */,
@@ -742,6 +751,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A2859431FE1714400A60688 /* Util.swift in Sources */,
 				4A1A6B671FBAFDF400AE1B45 /* WiaError.swift in Sources */,
 				4ACDF3391FE04A8C00DC80D6 /* Organisation.swift in Sources */,
 				4A1A6B5E1FBAFCD500AE1B45 /* User.swift in Sources */,

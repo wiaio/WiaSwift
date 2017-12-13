@@ -18,14 +18,18 @@ public class Event: Mappable  {
     /// The name of this Event
     public var name: String?
     
-    /// The data of this Device
+    /// The data of this Event
     public var data: Any?
 
+    /// The timestamp of this Event
+    public var timestamp: Date?
+
     // Constructor
-    init(id: String? = nil, name: String? = nil, data: Any? = nil) {
+    init(id: String? = nil, name: String? = nil, data: Any? = nil, timestamp: Date? = nil) {
         self.id = id
         self.name = name
         self.data = data
+        self.timestamp = timestamp
     }
     
     public required init?(map: Map){
@@ -36,5 +40,6 @@ public class Event: Mappable  {
         id <- map["id"]
         name <- map["name"]
         data <- map["data"]
+        timestamp <- (map["timestamp"], MilisecondDateTransform())
     }
 }
