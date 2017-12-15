@@ -32,10 +32,14 @@ public class Event: Mappable  {
         self.timestamp = timestamp
     }
     
-    public required init?(map: Map){
+    public required init?(){
         
     }
     
+    public required init?(map: Map){
+        
+    }
+
     public func mapping(map: Map) {
         id <- map["id"]
         name <- map["name"]

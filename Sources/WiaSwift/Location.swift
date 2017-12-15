@@ -10,7 +10,7 @@ import Foundation
 import ObjectMapper
 
 /// Represents an Location in Wia
-public class Location: Mappable  {
+open class Location: Mappable  {
     
     /// The ID of this Location
     public var id: String?
@@ -36,10 +36,14 @@ public class Location: Mappable  {
         self.timestamp = timestamp
     }
     
-    public required init?(map: Map){
+    public required init?(){
         
     }
     
+    public required init?(map: Map){
+        
+    }
+
     public func mapping(map: Map) {
         id <- map["id"]
         latitude <- map["latitude"]

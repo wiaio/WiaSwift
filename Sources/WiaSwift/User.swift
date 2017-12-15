@@ -10,7 +10,7 @@ import Foundation
 import ObjectMapper
 
 /// A User represents a user in Wia
-public class User: Mappable  {
+open class User: Mappable  {
     
     /// The ID of this User
     public var id: String?
@@ -30,10 +30,14 @@ public class User: Mappable  {
         self.fullName = fullName
     }
     
+    public required init?(){
+        
+    }
+
     public required init?(map: Map){
         
     }
-    
+
     public func mapping(map: Map) {
         id <- map["id"]
         fullName <- map["fullName"]

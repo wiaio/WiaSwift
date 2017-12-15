@@ -10,7 +10,7 @@ import Foundation
 import ObjectMapper
 
 /// Organisation represents an organisation in Wia
-public class Organisation: Mappable  {
+open class Organisation: Mappable  {
     
     /// The ID of this Organisation
     public var id: String?
@@ -24,10 +24,14 @@ public class Organisation: Mappable  {
         self.name = name
     }
     
-    public required init?(map: Map){
+    public required init?(){
         
     }
     
+    public required init?(map: Map){
+        
+    }
+
     public func mapping(map: Map) {
         id <- map["id"]
         name <- map["name"]

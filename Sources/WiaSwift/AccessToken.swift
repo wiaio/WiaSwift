@@ -10,7 +10,7 @@ import Foundation
 import ObjectMapper
 
 /// An AccessToken represents a access token in Wia
-public class AccessToken: Mappable {
+open class AccessToken: Mappable {
     
     /// The token
     public var token: String?
@@ -20,10 +20,14 @@ public class AccessToken: Mappable {
         self.token = token
     }
     
-    public required init?(map: Map){
+    public required init?(){
         
     }
     
+    public required init?(map: Map){
+        
+    }
+
     public func mapping(map: Map) {
         token <- map["token"]
     }

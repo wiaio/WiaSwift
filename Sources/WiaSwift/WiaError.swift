@@ -10,7 +10,7 @@ import Foundation
 import ObjectMapper
 
 /// A WiaError represents an API error in Wia
-public class WiaError: Mappable {
+open class WiaError: Mappable {
     
     /// The message of this WiaError
     public var message: String?

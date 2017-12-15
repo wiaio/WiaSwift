@@ -10,7 +10,7 @@ import Foundation
 import ObjectMapper
 
 /// A Space represents a collection of Devices in Wia
-public class Space: Mappable  {
+open class Space: Mappable  {
     
     /// The ID of this Space
     public var id: String?
@@ -28,10 +28,14 @@ public class Space: Mappable  {
         self.owner = owner
     }
     
-    public required init?(map: Map){
+    public required init?(){
         
     }
     
+    public required init?(map: Map){
+        
+    }
+
     public func mapping(map: Map) {
         id <- map["id"]
         name <- map["name"]

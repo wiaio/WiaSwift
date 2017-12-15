@@ -10,7 +10,7 @@ import Foundation
 import ObjectMapper
 
 /// Owner represents an organisation in Wia
-public class Owner: Mappable  {
+open class Owner: Mappable  {
     
     /// The owner user
     public var user: User?
@@ -24,10 +24,14 @@ public class Owner: Mappable  {
         self.organisation = organisation
     }
     
-    public required init?(map: Map){
+    public required init?(){
         
     }
     
+    public required init?(map: Map){
+        
+    }
+
     public func mapping(map: Map) {
         user <- map["user"]
         organisation <- map["organisation"]
