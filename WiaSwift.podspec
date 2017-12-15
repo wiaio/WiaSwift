@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "WiaSwift"
-  s.version          = "0.1.4"
+  s.version          = "0.1.5"
   s.summary          = "Offical Wia Swift SDK to access Wia's APIs."
 
   s.description      = <<-DESC
