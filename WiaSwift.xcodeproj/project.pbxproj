@@ -39,14 +39,15 @@
 		4A2859431FE1714400A60688 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2859411FE1712800A60688 /* Util.swift */; };
 		4A2859441FE1714400A60688 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2859411FE1712800A60688 /* Util.swift */; };
 		4A2859451FE1714400A60688 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2859411FE1712800A60688 /* Util.swift */; };
+		4A2987F72084D32000BFE452 /* WiaId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2987F62084D32000BFE452 /* WiaId.swift */; };
+		4A2987F82084D32000BFE452 /* WiaId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2987F62084D32000BFE452 /* WiaId.swift */; };
+		4A2987F92084D32000BFE452 /* WiaId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2987F62084D32000BFE452 /* WiaId.swift */; };
+		4A2987FA2084D32000BFE452 /* WiaId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2987F62084D32000BFE452 /* WiaId.swift */; };
 		4A4E7B141FB892D6001D829A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A4E7B121FB892D6001D829A /* Alamofire.framework */; };
 		4A4E7B191FB893A5001D829A /* WiaSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A4E7B181FB893A5001D829A /* WiaSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A4E7B1A1FB893A5001D829A /* WiaSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A4E7B181FB893A5001D829A /* WiaSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A4E7B1B1FB893A5001D829A /* WiaSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A4E7B181FB893A5001D829A /* WiaSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A4E7B1C1FB893A5001D829A /* WiaSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A4E7B181FB893A5001D829A /* WiaSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4A4E7B1E1FB893FD001D829A /* WiaSwift_Info_macOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A4E7B1D1FB893FD001D829A /* WiaSwift_Info_macOS.plist */; };
-		4A4E7B201FB89405001D829A /* WiaSwift_Info_tvOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A4E7B1F1FB89405001D829A /* WiaSwift_Info_tvOS.plist */; };
-		4A4E7B221FB8940D001D829A /* WiaSwift_Info_watchOS.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A4E7B211FB8940D001D829A /* WiaSwift_Info_watchOS.plist */; };
 		4A4E7B231FB8956D001D829A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A4E7B251FB8956D001D829A /* Alamofire.framework */; };
 		4A4E7B241FB8956D001D829A /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A4E7B261FB8956D001D829A /* Nimble.framework */; };
 		4A4E7B271FB89574001D829A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A4E7B291FB89574001D829A /* Alamofire.framework */; };
@@ -129,6 +130,7 @@
 		4A1A6B711FBB69C600AE1B45 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		4A1A6B761FBB6A3F00AE1B45 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		4A2859411FE1712800A60688 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		4A2987F62084D32000BFE452 /* WiaId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiaId.swift; sourceTree = "<group>"; };
 		4A4E7A9A1FB88B62001D829A /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		4A4E7A9C1FB88B83001D829A /* Space.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Space.swift; sourceTree = "<group>"; };
 		4A4E7A9F1FB88D1E001D829A /* WiaSwift_Info_iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = WiaSwift_Info_iOS.plist; path = "Supporting Files/WiaSwift_Info_iOS.plist"; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 				4A1A6B5A1FBAFCD000AE1B45 /* User.swift */,
 				4A4E7A9C1FB88B83001D829A /* Space.swift */,
 				4A1A6B711FBB69C600AE1B45 /* Event.swift */,
+				4A2987F62084D32000BFE452 /* WiaId.swift */,
 				4A1A6B761FBB6A3F00AE1B45 /* Location.swift */,
 				4ACDF3371FE04A8600DC80D6 /* Organisation.swift */,
 				4ACDF33C1FE04AD200DC80D6 /* Owner.swift */,
@@ -556,7 +559,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0910;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Wia Technologies Limited";
 				TargetAttributes = {
 					4A4E7AA51FB88DAA001D829A = {
@@ -632,7 +635,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A4E7B221FB8940D001D829A /* WiaSwift_Info_watchOS.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -640,7 +642,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A4E7B201FB89405001D829A /* WiaSwift_Info_tvOS.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -655,7 +656,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A4E7B1E1FB893FD001D829A /* WiaSwift_Info_macOS.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -681,6 +681,7 @@
 				4A1A6B771FBB6A3F00AE1B45 /* Location.swift in Sources */,
 				4A1A6B721FBB69C600AE1B45 /* Event.swift in Sources */,
 				4A4E7B331FB8977D001D829A /* Client.swift in Sources */,
+				4A2987F72084D32000BFE452 /* WiaId.swift in Sources */,
 				4A1A6B5B1FBAFCD000AE1B45 /* User.swift in Sources */,
 				4A1A6B651FBAFDF100AE1B45 /* WiaError.swift in Sources */,
 				4A1A6B591FBAFC8200AE1B45 /* AccessToken.swift in Sources */,
@@ -711,6 +712,7 @@
 				4A1A6B7A1FBB6A3F00AE1B45 /* Location.swift in Sources */,
 				4A1A6B751FBB69C600AE1B45 /* Event.swift in Sources */,
 				4AC8CDB51FB9B76F00F4859F /* Device.swift in Sources */,
+				4A2987FA2084D32000BFE452 /* WiaId.swift in Sources */,
 				4A4E7B361FB89B88001D829A /* Space.swift in Sources */,
 				4A4E7B301FB8977C001D829A /* Client.swift in Sources */,
 				4A1A6B691FBAFDF800AE1B45 /* AccessToken.swift in Sources */,
@@ -729,6 +731,7 @@
 				4A1A6B791FBB6A3F00AE1B45 /* Location.swift in Sources */,
 				4A1A6B741FBB69C600AE1B45 /* Event.swift in Sources */,
 				4AC8CDB41FB9B76F00F4859F /* Device.swift in Sources */,
+				4A2987F92084D32000BFE452 /* WiaId.swift in Sources */,
 				4A4E7B371FB89B88001D829A /* Space.swift in Sources */,
 				4A4E7B311FB8977D001D829A /* Client.swift in Sources */,
 				4A1A6B6B1FBAFDF900AE1B45 /* AccessToken.swift in Sources */,
@@ -759,6 +762,7 @@
 				4A1A6B781FBB6A3F00AE1B45 /* Location.swift in Sources */,
 				4A1A6B731FBB69C600AE1B45 /* Event.swift in Sources */,
 				4AC8CDB31FB9B76F00F4859F /* Device.swift in Sources */,
+				4A2987F82084D32000BFE452 /* WiaId.swift in Sources */,
 				4A4E7B381FB89B89001D829A /* Space.swift in Sources */,
 				4A4E7B321FB8977D001D829A /* Client.swift in Sources */,
 				4A1A6B6C1FBAFDF900AE1B45 /* AccessToken.swift in Sources */,
@@ -806,7 +810,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -843,7 +847,7 @@
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -1268,12 +1272,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -1321,12 +1327,14 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

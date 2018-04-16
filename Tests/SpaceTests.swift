@@ -43,7 +43,7 @@ class SpaceTests: XCTestCase {
     }
     
     func testRetrieveSpace() {
-        let expectation = self.expectation(description: "Retrieves a list space")
+        let expectation = self.expectation(description: "Retrieve a space")
         let client = TestClientFactory.testClient()
         
         client.listSpaces(onSuccess: { spaces, count in

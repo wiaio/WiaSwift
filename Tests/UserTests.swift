@@ -16,20 +16,7 @@ class UserTests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        UserTests.client = TestClientFactory.testClient()
-        
-        let expectation = self.expectation(description: "Setting up device tests")
-        
-        UserTests.client.listSpaces(onSuccess: { spaces, count in
-            expect(spaces).to(beAKindOf(Array<Space>.self))
-            DeviceTests.client.spaceId = spaces[0].id
-            expectation.fulfill()
-        }, onFailure: { error in
-            fail("Error retrieving list of spaces")
-            expectation.fulfill()
-        })
-        
-        waitForExpectations(timeout: 10.0, handler: nil)
+        UserTests.client.spaceId = ProcessInfo.processInfo.environment["WIA_SPACE_ID"]
     }
     
     override func tearDown() {

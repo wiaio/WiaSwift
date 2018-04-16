@@ -20,15 +20,19 @@ public class Event: Mappable  {
     
     /// The data of this Event
     public var data: Any?
+    
+    /// The file of this Event
+    public var file: Any?
 
     /// The timestamp of this Event
     public var timestamp: Date?
 
     // Constructor
-    init(id: String? = nil, name: String? = nil, data: Any? = nil, timestamp: Date? = nil) {
+    init(id: String? = nil, name: String? = nil, data: Any? = nil, file: Any? = nil, timestamp: Date? = nil) {
         self.id = id
         self.name = name
         self.data = data
+        self.file = file
         self.timestamp = timestamp
     }
     
@@ -44,6 +48,7 @@ public class Event: Mappable  {
         id <- map["id"]
         name <- map["name"]
         data <- map["data"]
+        file <- map["file"]
         timestamp <- (map["timestamp"], MilisecondDateTransform())
     }
 }

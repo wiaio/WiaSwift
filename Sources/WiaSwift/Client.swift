@@ -116,7 +116,7 @@ open class Wia {
                     onSuccess success: @escaping ([Device],Int?) -> Void,
                     onFailure failure: @escaping (WiaError) -> Void) {
         
-        let params = ["spaceId": spaceId]
+        let params = ["space.id": spaceId]
         
         Alamofire.request(requestUrl(path: "/devices"),
                           method: .get,
@@ -163,7 +163,7 @@ open class Wia {
                      onSuccess success: @escaping ([User],Int?) -> Void,
                      onFailure failure: @escaping (WiaError) -> Void) {
         
-        let params = ["spaceId": spaceId]
+        let params = ["space.id": spaceId]
         
         Alamofire.request(requestUrl(path: "/users"),
                           method: .get,
@@ -247,6 +247,34 @@ open class Wia {
     public func logoutUser(onSuccess success: @escaping () -> Void,
                     onFailure failure: @escaping (WiaError) -> Void) {
         self.accessToken = nil
+    }
+    
+    public func registerNotificationDevice(token: String,
+                                           type: String,
+                                           onSuccess success: @escaping (WiaId) -> Void,
+                                           onFailure failure: @escaping (WiaError) -> Void) {
+        let parameters: Parameters = [
+            "token": token,
+            "type": type
+        ]
+        
+        Alamofire.request(requestUrl(path: "/notifications/register"),
+                          method: .post,
+                          parameters: parameters,
+                          encoding: JSONEncoding.default,
+                          headers: self.generateHeaders()
+            ).validate().responseObject { (response: DataResponse<WiaId>) in
+                switch response.result {
+                case .success:
+                    let wiaId = response.result.value!
+                    success(wiaId)
+                    return
+                case .failure:
+                    let wiaError = WiaError(status: response.response?.statusCode)
+                    failure(wiaError)
+                    return
+                }
+        }
     }
 
     private func requestUrl(path: String) -> String {

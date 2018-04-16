@@ -16,18 +16,7 @@ class DeviceTests: XCTestCase {
     override func setUp() {
         super.setUp()
     
-        let expectation = self.expectation(description: "Setting up device tests")
-
-        DeviceTests.client.listSpaces(onSuccess: { spaces, count in
-            expect(spaces).to(beAKindOf(Array<Space>.self))
-            DeviceTests.client.spaceId = spaces[0].id
-            expectation.fulfill()
-        }, onFailure: { error in
-            fail("Error retrieving list of spaces")
-            expectation.fulfill()
-        })
-     
-        waitForExpectations(timeout: 10.0, handler: nil)
+        DeviceTests.client.spaceId = ProcessInfo.processInfo.environment["WIA_SPACE_ID"]
     }
     
     override func tearDown() {
@@ -87,19 +76,5 @@ class DeviceTests: XCTestCase {
         
         waitForExpectations(timeout: 10.0, handler: nil)
     }
-
-//    func testListSpacesBadAccessToken() {
-//        let expectation = self.expectation(description: "Retrieves a list of spaces for a shared instance")
-//        let client = TestClientFactory.testClient(accessToken: "abcdef")
-//
-//        client.listSpaces(onSuccess: { spaces, count in
-//            expect(spaces).to(beNil())
-//            expectation.fulfill()
-//        }, onFailure: { error in
-//            expectation.fulfill()
-//        })
-//
-//        waitForExpectations(timeout: 10.0, handler: nil)
-//    }
 }
 

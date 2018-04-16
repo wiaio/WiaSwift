@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0920"
+   LastUpgradeVersion = "0930"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -26,7 +26,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
@@ -56,7 +55,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -74,8 +72,28 @@
       </MacroExpansion>
       <EnvironmentVariables>
          <EnvironmentVariable
-            key = "user_access_token"
-            value = "abc"
+            key = "WIA_CLIENT_KEY"
+            value = "$(WIA_CLIENT_KEY)"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "WIA_DEVICE_ID"
+            value = "$(WIA_DEVICE_ID)"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "WIA_SPACE_ID"
+            value = "$(WIA_SPACE_ID)"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "WIA_APP_KEY"
+            value = "$(WIA_APP_KEY)"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "WIA_USER_ACCESS_TOKEN"
+            value = "$(WIA_USER_ACCESS_TOKEN)"
             isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>
