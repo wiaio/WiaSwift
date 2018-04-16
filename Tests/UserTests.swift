@@ -158,6 +158,23 @@ class UserTests: XCTestCase {
         
         waitForExpectations(timeout: 10.0, handler: nil)
     }
+    
+    func testRegisterNotificationDevice() {
+        let expectation = self.expectation(description: "Retrieve the currently authenticated user")
+        
+        UserTests.client.registerNotificationDevice(token: HelperUtils.randomString(length: 32), type: "ios", onSuccess: { (result) in
+            expect(result).to(beAKindOf(WiaId.self))
+            expect(result.id).toNot(beNil())
+            expectation.fulfill()
+        }) { (error) in
+            expect(error).to(beAKindOf(WiaError.self))
+            fail("Error status code \(error.status!)")
+            expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: 10.0, handler: nil)
+
+    }
 
 }
 
