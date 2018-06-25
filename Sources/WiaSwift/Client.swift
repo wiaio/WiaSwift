@@ -23,6 +23,7 @@ open class Wia {
     open var accessToken: String?
     open var baseURL: String
     open var spaceId: String?
+    open var deviceId: String?
     open var currentUser: User?
     
     public init(appKey: String? = nil,
@@ -34,6 +35,7 @@ open class Wia {
         self.accessToken = accessToken
         self.baseURL = baseURL ?? "https://api.wia.io/v1"
         self.spaceId = nil
+        self.deviceId = nil
     }
     
     public func reset() {
@@ -41,6 +43,7 @@ open class Wia {
         self.clientKey = nil
         self.accessToken = nil
         self.spaceId = nil
+        self.deviceId = nil
     }
     
     // Spaces
@@ -268,6 +271,88 @@ open class Wia {
                 case .success:
                     let wiaId = response.result.value!
                     success(wiaId)
+                    return
+                case .failure:
+                    let wiaError = WiaError(status: response.response?.statusCode)
+                    failure(wiaError)
+                    return
+                }
+        }
+    }
+
+    // Commands
+    public func runCommand(deviceId: String,
+                           commandSlug: String,
+                           onSuccess success: @escaping (CommandStatus) -> Void,
+                           onFailure failure: @escaping (WiaError) -> Void) {
+        let parameters: Parameters = [
+            "device.id": deviceId,
+            "slug": commandSlug
+        ]
+        
+        Alamofire.request(requestUrl(path: "/commands/run"),
+                          method: .post,
+                          parameters: parameters,
+                          encoding: JSONEncoding.default,
+                          headers: self.generateHeaders()
+            ).validate().responseObject { (response: DataResponse<CommandStatus>) in
+                switch response.result {
+                case .success:
+                    let commandStatus = response.result.value!
+                    success(commandStatus)
+                    return
+                case .failure:
+                    let wiaError = WiaError(status: response.response?.statusCode)
+                    failure(wiaError)
+                    return
+                }
+        }
+    }
+    
+    public func listCommands(deviceId: String,
+                            limit: Int? = nil,
+                            page: Int? = nil,
+                            onSuccess success: @escaping ([Command],Int?) -> Void,
+                            onFailure failure: @escaping (WiaError) -> Void) {
+        
+        let params = ["device.id": deviceId]
+        
+        Alamofire.request(requestUrl(path: "/commands"),
+                          method: .get,
+                          parameters: params,
+                          headers: self.generateHeaders()
+            ).validate().responseArray(keyPath: "commands") { (response: DataResponse<[Command]>) in
+                switch response.result {
+                case .success:
+                    let commands = response.result.value ?? []
+                    success(commands,commands.count)
+                    return
+                case .failure:
+                    let wiaError = WiaError(status: response.response?.statusCode)
+                    failure(wiaError)
+                    return
+                }
+        }
+    }
+    
+    // Widgets
+    public func listWidgets(deviceId: String,
+                             limit: Int? = nil,
+                             page: Int? = nil,
+                             onSuccess success: @escaping ([Widget],Int?) -> Void,
+                             onFailure failure: @escaping (WiaError) -> Void) {
+        
+        let params = ["device.id": deviceId]
+        
+        Alamofire.request(requestUrl(path: "/widgets"),
+                          method: .get,
+                          parameters: params,
+                          headers: self.generateHeaders()
+            ).validate().responseArray(keyPath: "widgets") { (response: DataResponse<[Widget]>) in
+                switch response.result {
+                case .success:
+                    let widgets = response.result.value ?? []
+                    success(widgets,widgets.count)
                     return
                 case .failure:
                     let wiaError = WiaError(status: response.response?.statusCode)
