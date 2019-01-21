@@ -72,28 +72,33 @@
       </MacroExpansion>
       <EnvironmentVariables>
          <EnvironmentVariable
-            key = "WIA_CLIENT_KEY"
-            value = "$(WIA_CLIENT_KEY)"
+            key = "WIA_TEST_CLIENT_KEY"
+            value = "$(WIA_TEST_CLIENT_KEY)"
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
-            key = "WIA_DEVICE_ID"
-            value = "$(WIA_DEVICE_ID)"
+            key = "WIA_TEST_APP_KEY"
+            value = "$(WIA_TEST_APP_KEY)"
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
-            key = "WIA_SPACE_ID"
-            value = "$(WIA_SPACE_ID)"
+            key = "WIA_TEST_DEVICE_ID"
+            value = "$(WIA_TEST_DEVICE_ID)"
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
-            key = "WIA_APP_KEY"
-            value = "$(WIA_APP_KEY)"
+            key = "WIA_TEST_USER_ACCESS_TOKEN"
+            value = "$(WIA_TEST_USER_ACCESS_TOKEN)"
             isEnabled = "YES">
          </EnvironmentVariable>
          <EnvironmentVariable
-            key = "WIA_USER_ACCESS_TOKEN"
-            value = "$(WIA_USER_ACCESS_TOKEN)"
+            key = "WIA_TEST_SPACE_ID"
+            value = "$(WIA_TEST_SPACE_ID)"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "WIA_TEST_API_BASE_URL"
+            value = "$(WIA_TEST_API_BASE_URL)"
             isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>

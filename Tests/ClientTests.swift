@@ -17,12 +17,12 @@ struct TestClientFactory {
                            accessToken: String? = nil,
                            baseURL: String? = nil) -> Wia {
         print("Setting up tests in TestClientFactory")
-        
+
         let client: Wia
-        let testAppKey = appKey ?? ProcessInfo.processInfo.environment["WIA_APP_KEY"]
-        let testClientKey = clientKey ?? ProcessInfo.processInfo.environment["WIA_CLIENT_KEY"]
-        let testAccessToken = accessToken ?? ProcessInfo.processInfo.environment["WIA_USER_ACCESS_TOKEN"]
-        let testBaseURL = baseURL ?? "https://api.wia.io/v1"
+        let testAppKey = appKey ?? ProcessInfo.processInfo.environment["WIA_TEST_APP_KEY"]
+        let testClientKey = clientKey ?? ProcessInfo.processInfo.environment["WIA_TEST_CLIENT_KEY"]
+        let testAccessToken = accessToken ?? ProcessInfo.processInfo.environment["WIA_TEST_USER_ACCESS_TOKEN"]
+        let testBaseURL = baseURL ?? ProcessInfo.processInfo.environment["WIA_TEST_API_BASE_URL"]
 
         client = Wia(appKey: testAppKey, clientKey: testClientKey, accessToken: testAccessToken, baseURL: testBaseURL)
         

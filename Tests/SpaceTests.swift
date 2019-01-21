@@ -21,6 +21,30 @@ class SpaceTests: XCTestCase {
         super.tearDown()
     }
     
+    func testsCreateSpace() {
+        let client = TestClientFactory.testClient()
+
+        let spaceName = "My First Space"
+        
+        let expectation = self.expectation(description: "Creates a space")
+        
+        client.createSpace(name: spaceName,
+                           onSuccess: { space in
+            expect(space).to(beAKindOf(Space.self))
+                                            
+            expect(space.id).toNot(beNil())
+            expect(space.name).to(equal(spaceName))
+
+            expectation.fulfill()
+        }, onFailure: { error in
+            expect(error).to(beAKindOf(WiaError.self))
+            fail("Error status code \(error.status!)")
+            expectation.fulfill()
+        })
+        
+        waitForExpectations(timeout: 10.0, handler: nil)
+    }
+
     func testListSpaces() {
         let expectation = self.expectation(description: "Retrieves a list of spaces")
         let client = TestClientFactory.testClient()

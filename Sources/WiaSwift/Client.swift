@@ -47,6 +47,32 @@ open class Wia {
     }
     
     // Spaces
+    public func createSpace(name: String,
+                             onSuccess success: @escaping (Space) -> Void,
+                             onFailure failure: @escaping (WiaError) -> Void) {
+        let parameters: Parameters = [
+            "name": name
+        ]
+        
+        Alamofire.request(requestUrl(path: "/spaces"),
+                          method: .post,
+                          parameters: parameters,
+                          encoding: JSONEncoding.default,
+                          headers: self.generateHeaders()
+            ).validate().responseObject { (response: DataResponse<Space>) in
+                switch response.result {
+                case .success:
+                    let space = response.result.value!
+                    success(space)
+                    return
+                case .failure:
+                    let wiaError = WiaError(status: response.response?.statusCode)
+                    failure(wiaError)
+                    return
+                }
+        }
+    }
+
     public func retrieveSpace(id: String,
                     onSuccess success: @escaping (Space) -> Void,
                     onFailure failure: @escaping (WiaError) -> Void) {
@@ -93,6 +119,36 @@ open class Wia {
     }
     
     // Devices
+    public func createDevice(name: String,
+                           deviceTypeId: Int,
+                           spaceId: String,
+                           onSuccess success: @escaping (Device) -> Void,
+                           onFailure failure: @escaping (WiaError) -> Void) {
+        let parameters: Parameters = [
+            "name": name,
+            "deviceTypeId": deviceTypeId,
+            "spaceId": spaceId
+        ]
+        
+        Alamofire.request(requestUrl(path: "/devices"),
+                          method: .post,
+                          parameters: parameters,
+                          encoding: JSONEncoding.default,
+                          headers: self.generateHeaders()
+            ).validate().responseObject { (response: DataResponse<Device>) in
+                switch response.result {
+                case .success:
+                    let device = response.result.value!
+                    success(device)
+                    return
+                case .failure:
+                    let wiaError = WiaError(status: response.response?.statusCode)
+                    failure(wiaError)
+                    return
+                }
+        }
+    }
+
     public func retrieveDevice(id: String,
                        onSuccess success: @escaping (Device) -> Void,
                        onFailure failure: @escaping (WiaError) -> Void) {
@@ -121,11 +177,15 @@ open class Wia {
         
         let params = ["space.id": spaceId]
         
-        Alamofire.request(requestUrl(path: "/devices"),
+        let devicesEndpoint: String = requestUrl(path: "/devices");
+        
+        Alamofire.request(devicesEndpoint,
                           method: .get,
                           parameters: params,
                           headers: self.generateHeaders()
             ).validate().responseArray(keyPath: "devices") { (response: DataResponse<[Device]>) in
+                debugPrint(response)
+
                 switch response.result {
                 case .success:
                     let devices = response.result.value ?? []
@@ -363,7 +423,7 @@ open class Wia {
     }
 
     private func requestUrl(path: String) -> String {
-        return baseURL + path
+        return "https://" + baseURL + path
     }
     
     private func generateHeaders() -> HTTPHeaders {

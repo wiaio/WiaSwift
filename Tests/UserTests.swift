@@ -16,7 +16,7 @@ class UserTests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        UserTests.client.spaceId = ProcessInfo.processInfo.environment["WIA_SPACE_ID"]
+        UserTests.client.spaceId = ProcessInfo.processInfo.environment["WIA_TEST_SPACE_ID"]
     }
     
     override func tearDown() {

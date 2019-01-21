@@ -16,7 +16,7 @@ class WidgetTests: XCTestCase {
     override func setUp() {
         super.setUp()
         
-        WidgetTests.client.deviceId = ProcessInfo.processInfo.environment["WIA_DEVICE_ID"]
+        WidgetTests.client.deviceId = ProcessInfo.processInfo.environment["WIA_TEST_DEVICE_ID"]
     }
     
     override func tearDown() {

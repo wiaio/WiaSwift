@@ -16,19 +16,41 @@ class DeviceTests: XCTestCase {
     override func setUp() {
         super.setUp()
     
-        DeviceTests.client.spaceId = ProcessInfo.processInfo.environment["WIA_SPACE_ID"]
+        DeviceTests.client.spaceId = ProcessInfo.processInfo.environment["WIA_TEST_SPACE_ID"]
     }
     
     override func tearDown() {
         super.tearDown()
     }
     
-    func testsCreateDeviceObject() {
-        let deviceId = "dev_abcdef123"
+    func testsCreateDevice() {
+        let deviceTypeId = 1001
         let deviceName = "Microverse battery"
-        let device = Device(id: deviceId, name: deviceName)
-        expect(device.id).to(equal(deviceId))
-        expect(device.name).to(equal(deviceName))
+        
+        let expectation = self.expectation(description: "Creates a device")
+        
+        DeviceTests.client.createDevice(name: deviceName,
+                                        deviceTypeId: deviceTypeId,
+                                        spaceId: DeviceTests.client.spaceId!,
+                                        onSuccess: { device in
+            expect(device).to(beAKindOf(Device.self))
+            
+            expect(device.id).toNot(beNil())
+            expect(device.name).to(equal(deviceName))
+            expect(device.type).toNot(beNil())
+            expect(device.type).to(beAKindOf(DeviceType.self))
+            expect(device.type?.id).toNot(beNil())
+            expect(device.type?.model).toNot(beNil())
+            expect(device.type?.manufacturer).toNot(beNil())
+                                            
+            expectation.fulfill()
+        }, onFailure: { error in
+            expect(error).to(beAKindOf(WiaError.self))
+            fail("Error status code \(error.status!)")
+            expectation.fulfill()
+        })
+        
+        waitForExpectations(timeout: 10.0, handler: nil)
     }
     
     func testListDevices() {
