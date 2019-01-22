@@ -199,6 +199,30 @@ open class Wia {
         }
     }
     
+    public func listDeviceTypes(onSuccess success: @escaping ([DeviceType],Int?) -> Void,
+                            onFailure failure: @escaping (WiaError) -> Void) {
+        
+        let devicesEndpoint: String = requestUrl(path: "/devices/types");
+        
+        Alamofire.request(devicesEndpoint,
+                          method: .get,
+                          headers: self.generateHeaders()
+            ).validate().responseArray(keyPath: "deviceTypes") { (response: DataResponse<[DeviceType]>) in
+                debugPrint(response)
+                
+                switch response.result {
+                case .success:
+                    let deviceTypes = response.result.value ?? []
+                    success(deviceTypes,deviceTypes.count)
+                    return
+                case .failure:
+                    let wiaError = WiaError(status: response.response?.statusCode)
+                    failure(wiaError)
+                    return
+                }
+        }
+    }
+    
     // Users
     public func retrieveUser(id: String,
                         onSuccess success: @escaping (User) -> Void,

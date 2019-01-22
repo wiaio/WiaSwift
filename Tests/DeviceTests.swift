@@ -98,5 +98,28 @@ class DeviceTests: XCTestCase {
         
         waitForExpectations(timeout: 10.0, handler: nil)
     }
+    
+//    func testListDeviceTypes() {
+//        let expectation = self.expectation(description: "Retrieves a list of device types")
+//        
+//        DeviceTests.client.listDeviceTypes(onSuccess: { deviceTypes, count in
+//            expect(deviceTypes).to(beAKindOf(Array<DeviceType>.self))
+//            
+//            for deviceType in deviceTypes {
+//                expect(deviceType).to(beAKindOf(DeviceType.self));
+//                expect(deviceType.id).notTo(beNil())
+//                expect(deviceType.model).notTo(beNil())
+//                expect(deviceType.manufacturer).notTo(beNil())
+//            }
+//            
+//            expectation.fulfill()
+//        }, onFailure: { error in
+//            expect(error).to(beAKindOf(WiaError.self))
+//            fail("Error status code \(error.status!)")
+//            expectation.fulfill()
+//        })
+//        
+//        waitForExpectations(timeout: 10.0, handler: nil)
+//    }
 }
 

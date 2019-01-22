@@ -23,7 +23,7 @@ class WidgetTests: XCTestCase {
         super.tearDown()
     }
     
-    func testListCommands() {
+    func testListWidgets() {
         let expectation = self.expectation(description: "Retrieves a list of widgets")
         
         WidgetTests.client.listWidgets(deviceId: WidgetTests.client.deviceId!, onSuccess: { widgets, count in
