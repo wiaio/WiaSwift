@@ -13,7 +13,7 @@ import Nimble
 struct TestClientFactory {
     
     static func testClient(appKey: String? = nil,
-                           clientKey: String? = nil,
+                            clientKey: String? = nil,
                            accessToken: String? = nil,
                            baseURL: String? = nil) -> Wia {
         print("Setting up tests in TestClientFactory")
