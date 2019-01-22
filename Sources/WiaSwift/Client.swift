@@ -33,7 +33,7 @@ open class Wia {
         self.appKey = appKey
         self.clientKey = clientKey
         self.accessToken = accessToken
-        self.baseURL = baseURL ?? "https://api.wia.io/v1"
+        self.baseURL = baseURL ?? "api.wia.io/v1"
         self.spaceId = nil
         self.deviceId = nil
     }
@@ -229,6 +229,7 @@ open class Wia {
                         onFailure failure: @escaping (WiaError) -> Void) {
         Alamofire.request(requestUrl(path: "/users/" + id),
                           method: .get,
+                          encoding: JSONEncoding.default,
                           headers: self.generateHeaders()
             ).validate().responseObject { (response: DataResponse<User>) in
                 switch response.result {

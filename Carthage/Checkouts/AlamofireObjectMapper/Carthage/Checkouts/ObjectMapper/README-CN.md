@@ -146,7 +146,9 @@ ObjectMapper 使用这个函数获取对象后进行映射。开发者需要在�
 
 如果你需要在 extension 里实现 ObjectMapper，你需要选择这个协议而不是 `Mappable` 。
 
-## `ImmutableMappable` Protocol
+## `ImmutableMappable` Protocol (Beta)
+
+> ⚠️ 这个特性还处于 Beta 阶段。正式发布时 API 可能会完全不同。
 
 使用 `ImmutableMappable` 可以映射不可变的属性。下面的表格展示了 `ImmutableMappable` 和 `Mappable` 的不同：
 
