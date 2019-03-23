@@ -22,6 +22,8 @@ matrix:
 
 before_install:
  - chmod +x ./Scripts/travis-build-test.sh
+ - chmod +x ./bin/setup
 
 script:
+ - ./bin/setup
  - ./Scripts/travis-build-test.sh
