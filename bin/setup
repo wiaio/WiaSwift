@@ -1,0 +1,22 @@
+#!/usr/bin/env sh
+
+if ! command -v carthage > /dev/null; then
+  printf 'Carthage is not installed.\n'
+  printf 'See https://github.com/Carthage/Carthage for install instructions.\n'
+  exit 1
+fi
+
+if [ -f "Development.xcconfig" ]
+then
+  printf "Config file already exists.\n"
+else
+  rm -f Development.xcconfig
+
+  printf "WIA_TEST_API_BASE_URL=$WIA_TEST_API_BASE_URL\n" >> Development.xcconfig
+  printf "WIA_TEST_USER_ACCESS_TOKEN=$WIA_TEST_USER_ACCESS_TOKEN\n" >> Development.xcconfig
+  printf "WIA_TEST_CLIENT_KEY=$WIA_TEST_CLIENT_KEY\n" >> Development.xcconfig
+  printf "WIA_TEST_DEVICE_ID=$WIA_TEST_DEVICE_ID\n" >> Development.xcconfig
+  printf "WIA_TEST_SPACE_ID=$WIA_TEST_SPACE_ID" >> Development.xcconfig
+fi
+
+carthage update --platform iOS --use-submodules --no-use-binaries

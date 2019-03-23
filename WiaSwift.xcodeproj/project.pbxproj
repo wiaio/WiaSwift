@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4A043B9F1FC338990024DA43 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A4E7AC71FB89229001D829A /* Nimble.framework */; };
 		4A043BA01FC338AC0024DA43 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A4E7B161FB892E0001D829A /* Alamofire.framework */; };
+		4A1088E72246386B0007DF20 /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC8CDCA1FBA489600F4859F /* AlamofireObjectMapper.framework */; };
+		4A1088E82246386D0007DF20 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC8CDCB1FBA489700F4859F /* ObjectMapper.framework */; };
 		4A1A6B591FBAFC8200AE1B45 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A6B581FBAFC8200AE1B45 /* AccessToken.swift */; };
 		4A1A6B5B1FBAFCD000AE1B45 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A6B5A1FBAFCD000AE1B45 /* User.swift */; };
 		4A1A6B5C1FBAFCD400AE1B45 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A6B5A1FBAFCD000AE1B45 /* User.swift */; };
@@ -43,9 +45,6 @@
 		4A1FE82721F671F200F21EFC /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1FE82521F671F200F21EFC /* Flow.swift */; };
 		4A1FE82821F671F200F21EFC /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1FE82521F671F200F21EFC /* Flow.swift */; };
 		4A1FE82921F671F200F21EFC /* Flow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1FE82521F671F200F21EFC /* Flow.swift */; };
-		4A1FE82B21F679E300F21EFC /* Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 4A1FE82A21F679E300F21EFC /* Development.xcconfig */; };
-		4A1FE82C21F679E300F21EFC /* Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 4A1FE82A21F679E300F21EFC /* Development.xcconfig */; };
-		4A1FE82D21F679E300F21EFC /* Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 4A1FE82A21F679E300F21EFC /* Development.xcconfig */; };
 		4A2859421FE1712800A60688 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2859411FE1712800A60688 /* Util.swift */; };
 		4A2859431FE1714400A60688 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2859411FE1712800A60688 /* Util.swift */; };
 		4A2859441FE1714400A60688 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2859411FE1712800A60688 /* Util.swift */; };
@@ -68,6 +67,8 @@
 		4A4E7B371FB89B88001D829A /* Space.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4E7A9C1FB88B83001D829A /* Space.swift */; };
 		4A4E7B381FB89B89001D829A /* Space.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4E7A9C1FB88B83001D829A /* Space.swift */; };
 		4A4E7B391FB89B89001D829A /* Space.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4E7A9C1FB88B83001D829A /* Space.swift */; };
+		4A56BA91224636B800D0822F /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC8CDCB1FBA489700F4859F /* ObjectMapper.framework */; };
+		4A56BA92224636BB00D0822F /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC8CDCA1FBA489600F4859F /* AlamofireObjectMapper.framework */; };
 		4A5B9BEC20E0DC7000D00651 /* WidgetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5B9BEA20E0DC6900D00651 /* WidgetTests.swift */; };
 		4A5B9BED20E0DC7000D00651 /* WidgetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5B9BEA20E0DC6900D00651 /* WidgetTests.swift */; };
 		4A5B9BEE20E0DC7100D00651 /* WidgetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5B9BEA20E0DC6900D00651 /* WidgetTests.swift */; };
@@ -98,8 +99,6 @@
 		4AC8CDBF1FB9E56D00F4859F /* SpaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC8CDBE1FB9E56D00F4859F /* SpaceTests.swift */; };
 		4AC8CDC01FB9E56D00F4859F /* SpaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC8CDBE1FB9E56D00F4859F /* SpaceTests.swift */; };
 		4AC8CDC11FB9E56D00F4859F /* SpaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC8CDBE1FB9E56D00F4859F /* SpaceTests.swift */; };
-		4AC8CDCC1FBA489700F4859F /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC8CDCA1FBA489600F4859F /* AlamofireObjectMapper.framework */; };
-		4AC8CDCD1FBA489700F4859F /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC8CDCB1FBA489700F4859F /* ObjectMapper.framework */; };
 		4AC8CDD01FBA48A100F4859F /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC8CDCE1FBA48A100F4859F /* AlamofireObjectMapper.framework */; };
 		4AC8CDD11FBA48A100F4859F /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC8CDCF1FBA48A100F4859F /* ObjectMapper.framework */; };
 		4AC8CDD41FBA48AB00F4859F /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC8CDD21FBA48AA00F4859F /* AlamofireObjectMapper.framework */; };
@@ -201,8 +200,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AC8CDCC1FBA489700F4859F /* AlamofireObjectMapper.framework in Frameworks */,
-				4AC8CDCD1FBA489700F4859F /* ObjectMapper.framework in Frameworks */,
+				4A1088E82246386D0007DF20 /* ObjectMapper.framework in Frameworks */,
+				4A1088E72246386B0007DF20 /* AlamofireObjectMapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,8 +209,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A56BA91224636B800D0822F /* ObjectMapper.framework in Frameworks */,
 				4A7DF8501FC210CD0073B2B4 /* Alamofire.framework in Frameworks */,
 				4A043B9F1FC338990024DA43 /* Nimble.framework in Frameworks */,
+				4A56BA92224636BB00D0822F /* AlamofireObjectMapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -574,15 +575,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0910;
-				LastUpgradeCheck = 0930;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Wia Technologies Limited";
 				TargetAttributes = {
 					4A4E7AA51FB88DAA001D829A = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 					4A4E7AAD1FB88DAA001D829A = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 1010;
 						ProvisioningStyle = Automatic;
 					};
 					4A4E7ACD1FB89244001D829A = {
@@ -643,7 +646,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A1FE82B21F679E300F21EFC /* Development.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -665,7 +667,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A1FE82D21F679E300F21EFC /* Development.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -680,7 +681,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A1FE82C21F679E300F21EFC /* Development.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -873,7 +873,7 @@
 				PRODUCT_NAME = WiaSwift;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -908,7 +908,7 @@
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = WiaSwift;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -939,7 +939,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wia.WiaSwift-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -966,7 +966,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wia.WiaSwift-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
