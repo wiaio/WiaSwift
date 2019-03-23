@@ -1,6 +1,7 @@
 [submodule "Carthage/Checkouts/Nimble"]
 	path = Carthage/Checkouts/Nimble
 	url = https://github.com/Quick/Nimble.git
+	branch = 7.x-branch
 [submodule "Carthage/Checkouts/Alamofire"]
 	path = Carthage/Checkouts/Alamofire
 	url = https://github.com/Alamofire/Alamofire.git
