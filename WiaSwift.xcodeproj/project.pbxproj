@@ -53,6 +53,10 @@
 		4A2987F82084D32000BFE452 /* WiaId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2987F62084D32000BFE452 /* WiaId.swift */; };
 		4A2987F92084D32000BFE452 /* WiaId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2987F62084D32000BFE452 /* WiaId.swift */; };
 		4A2987FA2084D32000BFE452 /* WiaId.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2987F62084D32000BFE452 /* WiaId.swift */; };
+		4A4B071122463F660017BA3B /* DeviceApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4B071022463F660017BA3B /* DeviceApiKey.swift */; };
+		4A4B071222463FB00017BA3B /* DeviceApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4B071022463F660017BA3B /* DeviceApiKey.swift */; };
+		4A4B071322463FB00017BA3B /* DeviceApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4B071022463F660017BA3B /* DeviceApiKey.swift */; };
+		4A4B071422463FB10017BA3B /* DeviceApiKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4B071022463F660017BA3B /* DeviceApiKey.swift */; };
 		4A4E7B141FB892D6001D829A /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A4E7B121FB892D6001D829A /* Alamofire.framework */; };
 		4A4E7B191FB893A5001D829A /* WiaSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A4E7B181FB893A5001D829A /* WiaSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4A4E7B1A1FB893A5001D829A /* WiaSwift.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A4E7B181FB893A5001D829A /* WiaSwift.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -152,6 +156,7 @@
 		4A1FE82A21F679E300F21EFC /* Development.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		4A2859411FE1712800A60688 /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		4A2987F62084D32000BFE452 /* WiaId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiaId.swift; sourceTree = "<group>"; };
+		4A4B071022463F660017BA3B /* DeviceApiKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceApiKey.swift; sourceTree = "<group>"; };
 		4A4E7A9A1FB88B62001D829A /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		4A4E7A9C1FB88B83001D829A /* Space.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Space.swift; sourceTree = "<group>"; };
 		4A4E7A9F1FB88D1E001D829A /* WiaSwift_Info_iOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = WiaSwift_Info_iOS.plist; path = "Supporting Files/WiaSwift_Info_iOS.plist"; sourceTree = "<group>"; };
@@ -280,6 +285,7 @@
 				4A2859411FE1712800A60688 /* Util.swift */,
 				4A1A6B641FBAFDF100AE1B45 /* WiaError.swift */,
 				4AC8CDB11FB9B76F00F4859F /* Device.swift */,
+				4A4B071022463F660017BA3B /* DeviceApiKey.swift */,
 				4A1FE82521F671F200F21EFC /* Flow.swift */,
 				4A1FE82021F6662B00F21EFC /* DeviceType.swift */,
 				4A1A6B581FBAFC8200AE1B45 /* AccessToken.swift */,
@@ -702,6 +708,7 @@
 				4A4E7B331FB8977D001D829A /* Client.swift in Sources */,
 				4A1FE82121F6662B00F21EFC /* DeviceType.swift in Sources */,
 				4A2987F72084D32000BFE452 /* WiaId.swift in Sources */,
+				4A4B071122463F660017BA3B /* DeviceApiKey.swift in Sources */,
 				4A1A6B5B1FBAFCD000AE1B45 /* User.swift in Sources */,
 				4A1A6B651FBAFDF100AE1B45 /* WiaError.swift in Sources */,
 				4A1FE82621F671F200F21EFC /* Flow.swift in Sources */,
@@ -729,6 +736,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A2859451FE1714400A60688 /* Util.swift in Sources */,
+				4A4B071422463FB10017BA3B /* DeviceApiKey.swift in Sources */,
 				4A1A6B661FBAFDF400AE1B45 /* WiaError.swift in Sources */,
 				4ACDF33B1FE04A8C00DC80D6 /* Organisation.swift in Sources */,
 				4A1A6B5C1FBAFCD400AE1B45 /* User.swift in Sources */,
@@ -752,6 +760,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A2859441FE1714400A60688 /* Util.swift in Sources */,
+				4A4B071322463FB00017BA3B /* DeviceApiKey.swift in Sources */,
 				4A1A6B681FBAFDF500AE1B45 /* WiaError.swift in Sources */,
 				4ACDF33A1FE04A8C00DC80D6 /* Organisation.swift in Sources */,
 				4A1A6B5D1FBAFCD500AE1B45 /* User.swift in Sources */,
@@ -789,6 +798,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A2859431FE1714400A60688 /* Util.swift in Sources */,
+				4A4B071222463FB00017BA3B /* DeviceApiKey.swift in Sources */,
 				4A1A6B671FBAFDF400AE1B45 /* WiaError.swift in Sources */,
 				4ACDF3391FE04A8C00DC80D6 /* Organisation.swift in Sources */,
 				4A1A6B5E1FBAFCD500AE1B45 /* User.swift in Sources */,

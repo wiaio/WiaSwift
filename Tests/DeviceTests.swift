@@ -99,6 +99,32 @@ class DeviceTests: XCTestCase {
         waitForExpectations(timeout: 10.0, handler: nil)
     }
     
+    func testRetrieveDeviceApiKey() {
+        let expectation = self.expectation(description: "Retrieve a device api key")
+        
+        DeviceTests.client.listDevices(spaceId: DeviceTests.client.spaceId!, onSuccess: { devices, count in
+            expect(devices).to(beAKindOf(Array<Device>.self))
+            
+            let device = devices[0]
+            expect(device.id).notTo(beNil())
+            
+            DeviceTests.client.retrieveDeviceApiKey(id: device.id!, onSuccess: { apiKey in
+                expect(apiKey).to(beAKindOf(DeviceApiKey.self))
+                expect(apiKey.secretKey).notTo(beNil())
+                expectation.fulfill()
+            }, onFailure: { error in
+                expect(error).to(beAKindOf(WiaError.self))
+                fail("Error status code \(error.status!)")
+            })
+        }, onFailure: { error in
+            expect(error).to(beAKindOf(WiaError.self))
+            fail("Error status code \(error.status!)")
+            expectation.fulfill()
+        })
+        
+        waitForExpectations(timeout: 10.0, handler: nil)
+    }
+    
 //    func testListDeviceTypes() {
 //        let expectation = self.expectation(description: "Retrieves a list of device types")
 //        

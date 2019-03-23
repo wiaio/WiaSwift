@@ -122,13 +122,18 @@ open class Wia {
     public func createDevice(name: String,
                            deviceTypeId: Int,
                            spaceId: String,
+                           serialNumber: String? = nil,
                            onSuccess success: @escaping (Device) -> Void,
                            onFailure failure: @escaping (WiaError) -> Void) {
-        let parameters: Parameters = [
+        var parameters: Parameters = [
             "name": name,
             "deviceTypeId": deviceTypeId,
             "spaceId": spaceId
         ]
+        
+        if (serialNumber != nil) {
+            parameters["serialNumber"] = serialNumber
+        }
         
         Alamofire.request(requestUrl(path: "/devices"),
                           method: .post,
@@ -223,6 +228,27 @@ open class Wia {
         }
     }
     
+    public func retrieveDeviceApiKey(id: String,
+                             onSuccess success: @escaping (DeviceApiKey) -> Void,
+                             onFailure failure: @escaping (WiaError) -> Void) {
+        Alamofire.request(requestUrl(path: "/devices/" + id + "/apiKeys"),
+                          method: .get,
+                          encoding: JSONEncoding.default,
+                          headers: self.generateHeaders()
+            ).validate().responseObject { (response: DataResponse<DeviceApiKey>) in
+                switch response.result {
+                case .success:
+                    let apiKey = response.result.value!
+                    success(apiKey)
+                    return
+                case .failure:
+                    let wiaError = WiaError(status: response.response?.statusCode)
+                    failure(wiaError)
+                    return
+                }
+        }
+    }
+
     // Users
     public func retrieveUser(id: String,
                         onSuccess success: @escaping (User) -> Void,
