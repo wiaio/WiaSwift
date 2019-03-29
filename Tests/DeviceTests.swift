@@ -111,6 +111,7 @@ class DeviceTests: XCTestCase {
             DeviceTests.client.retrieveDeviceApiKey(id: device.id!, onSuccess: { apiKey in
                 expect(apiKey).to(beAKindOf(DeviceApiKey.self))
                 expect(apiKey.secretKey).notTo(beNil())
+                expect(apiKey.secretKey).to(beginWith("d_sk"))
                 expectation.fulfill()
             }, onFailure: { error in
                 expect(error).to(beAKindOf(WiaError.self))

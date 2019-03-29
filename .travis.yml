@@ -11,13 +11,13 @@ branches:
 matrix:
   include:
       # Xcode9
-    - osx_image: xcode10.1
-      env: SDK=iphonesimulator PLATFORM="iOS Simulator,name=iPhone 8,OS=12.1" SCHEME=WiaSwift_iOS
-    #- osx_image: xcode10.1
+    - osx_image: xcode10.2
+      env: SDK=iphonesimulator PLATFORM="iOS Simulator,name=iPhone 8,OS=12.2" SCHEME=WiaSwift_iOS
+    #- osx_image: xcode10.2
     #  env: SDK=appletvsimulator PLATFORM="tvOS Simulator,name=Apple TV 1080p,OS=12.1" SCHEME=WiaSwift_tvOS
-    #- osx_image: xcode10.1
+    #- osx_image: xcode10.2
     #  env: SDK=macosx PLATFORM="OS X" SCHEME=WiaSwift_macOS
-    #- osx_image: xcode10.1
+    #- osx_image: xcode10.2
     #  env: SWIFT_BUILD=true
 
 before_install:

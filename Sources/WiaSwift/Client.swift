@@ -53,7 +53,7 @@ open class Wia {
         let parameters: Parameters = [
             "name": name
         ]
-        
+
         Alamofire.request(requestUrl(path: "/spaces"),
                           method: .post,
                           parameters: parameters,

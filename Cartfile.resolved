@@ -1,4 +1,4 @@
-github "Alamofire/Alamofire" "4.8.1"
-github "Quick/Nimble" "v7.3.4"
-github "tristanhimmelman/AlamofireObjectMapper" "5.2.0"
+github "Alamofire/Alamofire" "4.8.2"
+github "Quick/Nimble" "v8.0.1"
+github "openium/AlamofireObjectMapper" "b933e7816faa0c76a8d227b4e4c3323ab3cf6e9f"
 github "tristanhimmelman/ObjectMapper" "3.4.2"
