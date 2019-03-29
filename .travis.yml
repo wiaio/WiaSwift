@@ -1,4 +1,5 @@
 language: swift
+osx_image: xcode10.2
 
 # Whitelist `master` branch as the only branch to build pushes for.
 branches:
@@ -7,14 +8,9 @@ branches:
     - /^\d+\.\d+\.\d+(-(beta|alpha|RC)\d*)?/ # Regex to trigger builds for git tags so that we can deploy docs to gh-pages.
 matrix:
   include:
-    - osx_image: xcode10.2
-      env: SDK=iphonesimulator PLATFORM="iOS Simulator,name=iPhone 8,OS=12.2" SCHEME=WiaSwift_iOS
-    #- osx_image: xcode10.2
-    #  env: SDK=appletvsimulator PLATFORM="tvOS Simulator,name=Apple TV 1080p,OS=12.1" SCHEME=WiaSwift_tvOS
-    #- osx_image: xcode10.2
-    #  env: SDK=macosx PLATFORM="OS X" SCHEME=WiaSwift_macOS
-    #- osx_image: xcode10.2
-    #  env: SWIFT_BUILD=true
+     - env: SDK=iphonesimulator PLATFORM="iOS Simulator,name=iPhone 8,OS=12.2" SCHEME=WiaSwift_iOS
+     #- env: SDK=appletvsimulator PLATFORM="tvOS Simulator,name=Apple TV 4K,OS=12.2" SCHEME=WiaSwift_tvOS
+     #- env: SDK=macosx PLATFORM="OS X" SCHEME=WiaSwift_macOS
 
 before_install:
  - chmod +x ./Scripts/travis-build-test.sh

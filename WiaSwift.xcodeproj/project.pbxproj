@@ -8,10 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		4A012473224E2CA90031E7A1 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A4E7AC11FB89016001D829A /* Alamofire.framework */; };
-		4A043B9F1FC338990024DA43 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A4E7AC71FB89229001D829A /* Nimble.framework */; };
 		4A043BA01FC338AC0024DA43 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A4E7B161FB892E0001D829A /* Alamofire.framework */; };
 		4A1088E72246386B0007DF20 /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC8CDCA1FBA489600F4859F /* AlamofireObjectMapper.framework */; };
-		4A1088E82246386D0007DF20 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC8CDCB1FBA489700F4859F /* ObjectMapper.framework */; };
 		4A1A6B591FBAFC8200AE1B45 /* AccessToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A6B581FBAFC8200AE1B45 /* AccessToken.swift */; };
 		4A1A6B5B1FBAFCD000AE1B45 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A6B5A1FBAFCD000AE1B45 /* User.swift */; };
 		4A1A6B5C1FBAFCD400AE1B45 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A1A6B5A1FBAFCD000AE1B45 /* User.swift */; };
@@ -72,8 +70,6 @@
 		4A4E7B371FB89B88001D829A /* Space.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4E7A9C1FB88B83001D829A /* Space.swift */; };
 		4A4E7B381FB89B89001D829A /* Space.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4E7A9C1FB88B83001D829A /* Space.swift */; };
 		4A4E7B391FB89B89001D829A /* Space.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4E7A9C1FB88B83001D829A /* Space.swift */; };
-		4A56BA91224636B800D0822F /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC8CDCB1FBA489700F4859F /* ObjectMapper.framework */; };
-		4A56BA92224636BB00D0822F /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC8CDCA1FBA489600F4859F /* AlamofireObjectMapper.framework */; };
 		4A5B9BEC20E0DC7000D00651 /* WidgetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5B9BEA20E0DC6900D00651 /* WidgetTests.swift */; };
 		4A5B9BED20E0DC7000D00651 /* WidgetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5B9BEA20E0DC6900D00651 /* WidgetTests.swift */; };
 		4A5B9BEE20E0DC7100D00651 /* WidgetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5B9BEA20E0DC6900D00651 /* WidgetTests.swift */; };
@@ -83,10 +79,17 @@
 		4A60178720DD1B9400B18ED6 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A60178320DD1A3A00B18ED6 /* Command.swift */; };
 		4A7313E01FB907630092C7FB /* ClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* ClientTests.swift */; };
 		4A7313E11FB907630092C7FB /* ClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* ClientTests.swift */; };
-		4A7DF8501FC210CD0073B2B4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A4E7AC11FB89016001D829A /* Alamofire.framework */; };
+		4A74941C224ECF640030FEE5 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A74941B224ECF640030FEE5 /* ObjectMapper.framework */; };
+		4A74941E224ECFE40030FEE5 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A74941D224ECFE40030FEE5 /* ObjectMapper.framework */; };
+		4A749420224ECFEE0030FEE5 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A74941F224ECFEE0030FEE5 /* ObjectMapper.framework */; };
+		4A749422224ECFF80030FEE5 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A749421224ECFF80030FEE5 /* ObjectMapper.framework */; };
+		4A74942A224ED3C00030FEE5 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A749429224ED3C00030FEE5 /* Quick.framework */; };
+		4A74942C224ED3D10030FEE5 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A74942B224ED3D10030FEE5 /* Quick.framework */; };
+		4A74942E224ED3D80030FEE5 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A74942D224ED3D80030FEE5 /* Quick.framework */; };
+		4A749430224ED3E10030FEE5 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A74942F224ED3E10030FEE5 /* Nimble.framework */; };
+		4A749432224ED3E60030FEE5 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A749431224ED3E60030FEE5 /* Nimble.framework */; };
+		4A749434224ED3ED0030FEE5 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A749433224ED3ED0030FEE5 /* Nimble.framework */; };
 		4A7DF8531FC210E20073B2B4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A4E7B0E1FB892CB001D829A /* Alamofire.framework */; };
-		4A7DF8541FC210EA0073B2B4 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A4E7B0F1FB892CB001D829A /* Nimble.framework */; };
-		4A7DF8551FC210F00073B2B4 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A4E7B131FB892D6001D829A /* Nimble.framework */; };
 		4AA753AC20DE767300221AB1 /* CommandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA753AA20DE766E00221AB1 /* CommandTests.swift */; };
 		4AA753AD20DE767300221AB1 /* CommandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA753AA20DE766E00221AB1 /* CommandTests.swift */; };
 		4AA753AE20DE767400221AB1 /* CommandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA753AA20DE766E00221AB1 /* CommandTests.swift */; };
@@ -105,10 +108,7 @@
 		4AC8CDC01FB9E56D00F4859F /* SpaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC8CDBE1FB9E56D00F4859F /* SpaceTests.swift */; };
 		4AC8CDC11FB9E56D00F4859F /* SpaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC8CDBE1FB9E56D00F4859F /* SpaceTests.swift */; };
 		4AC8CDD01FBA48A100F4859F /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC8CDCE1FBA48A100F4859F /* AlamofireObjectMapper.framework */; };
-		4AC8CDD11FBA48A100F4859F /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC8CDCF1FBA48A100F4859F /* ObjectMapper.framework */; };
 		4AC8CDD41FBA48AB00F4859F /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC8CDD21FBA48AA00F4859F /* AlamofireObjectMapper.framework */; };
-		4AC8CDD51FBA48AB00F4859F /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC8CDD31FBA48AB00F4859F /* ObjectMapper.framework */; };
-		4AC8CDD81FBA48BA00F4859F /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC8CDD61FBA48BA00F4859F /* ObjectMapper.framework */; };
 		4AC8CDD91FBA48BA00F4859F /* AlamofireObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AC8CDD71FBA48BA00F4859F /* AlamofireObjectMapper.framework */; };
 		4ACDF3381FE04A8600DC80D6 /* Organisation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACDF3371FE04A8600DC80D6 /* Organisation.swift */; };
 		4ACDF3391FE04A8C00DC80D6 /* Organisation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACDF3371FE04A8600DC80D6 /* Organisation.swift */; };
@@ -165,7 +165,6 @@
 		4A4E7AAE1FB88DAA001D829A /* WiaSwift_iOS_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WiaSwift_iOS_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A4E7ABD1FB88DDE001D829A /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		4A4E7AC11FB89016001D829A /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
-		4A4E7AC71FB89229001D829A /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		4A4E7ACE1FB89244001D829A /* WiaSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WiaSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A4E7ADB1FB89256001D829A /* WiaSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WiaSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A4E7AE31FB89256001D829A /* WiaSwift_tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WiaSwift_tvOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,13 +181,25 @@
 		4A4E7B211FB8940D001D829A /* WiaSwift_Info_watchOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = WiaSwift_Info_watchOS.plist; path = "Supporting Files/WiaSwift_Info_watchOS.plist"; sourceTree = "<group>"; };
 		4A5B9BEA20E0DC6900D00651 /* WidgetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetTests.swift; sourceTree = "<group>"; };
 		4A60178320DD1A3A00B18ED6 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		4A749419224ECF3D0030FEE5 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A74941B224ECF640030FEE5 /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A74941D224ECFE40030FEE5 /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A74941F224ECFEE0030FEE5 /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A749421224ECFF80030FEE5 /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A749423224ED0020030FEE5 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A749425224ED00B0030FEE5 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A749429224ED3C00030FEE5 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A74942B224ED3D10030FEE5 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A74942D224ED3D80030FEE5 /* Quick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Quick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A74942F224ED3E10030FEE5 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A749431224ED3E60030FEE5 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A749433224ED3ED0030FEE5 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AA753AA20DE766E00221AB1 /* CommandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandTests.swift; sourceTree = "<group>"; };
 		4AA753AF20DE76A400221AB1 /* Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Widget.swift; sourceTree = "<group>"; };
 		4AC8CDB11FB9B76F00F4859F /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
 		4AC8CDB61FB9B7CD00F4859F /* DeviceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTests.swift; sourceTree = "<group>"; };
 		4AC8CDBE1FB9E56D00F4859F /* SpaceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceTests.swift; sourceTree = "<group>"; };
 		4AC8CDCA1FBA489600F4859F /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = Carthage/Build/iOS/AlamofireObjectMapper.framework; sourceTree = "<group>"; };
-		4AC8CDCB1FBA489700F4859F /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/iOS/ObjectMapper.framework; sourceTree = "<group>"; };
 		4AC8CDCE1FBA48A100F4859F /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = Carthage/Build/Mac/AlamofireObjectMapper.framework; sourceTree = "<group>"; };
 		4AC8CDCF1FBA48A100F4859F /* ObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ObjectMapper.framework; path = Carthage/Build/Mac/ObjectMapper.framework; sourceTree = "<group>"; };
 		4AC8CDD21FBA48AA00F4859F /* AlamofireObjectMapper.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireObjectMapper.framework; path = Carthage/Build/tvOS/AlamofireObjectMapper.framework; sourceTree = "<group>"; };
@@ -206,8 +217,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A74941C224ECF640030FEE5 /* ObjectMapper.framework in Frameworks */,
 				4A012473224E2CA90031E7A1 /* Alamofire.framework in Frameworks */,
-				4A1088E82246386D0007DF20 /* ObjectMapper.framework in Frameworks */,
 				4A1088E72246386B0007DF20 /* AlamofireObjectMapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -216,10 +227,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A56BA91224636B800D0822F /* ObjectMapper.framework in Frameworks */,
-				4A7DF8501FC210CD0073B2B4 /* Alamofire.framework in Frameworks */,
-				4A043B9F1FC338990024DA43 /* Nimble.framework in Frameworks */,
-				4A56BA92224636BB00D0822F /* AlamofireObjectMapper.framework in Frameworks */,
+				4A749430224ED3E10030FEE5 /* Nimble.framework in Frameworks */,
+				4A74942A224ED3C00030FEE5 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,7 +236,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4AC8CDD81FBA48BA00F4859F /* ObjectMapper.framework in Frameworks */,
+				4A749422224ECFF80030FEE5 /* ObjectMapper.framework in Frameworks */,
 				4A043BA01FC338AC0024DA43 /* Alamofire.framework in Frameworks */,
 				4AC8CDD91FBA48BA00F4859F /* AlamofireObjectMapper.framework in Frameworks */,
 			);
@@ -237,9 +246,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A749420224ECFEE0030FEE5 /* ObjectMapper.framework in Frameworks */,
 				4A4E7B141FB892D6001D829A /* Alamofire.framework in Frameworks */,
 				4AC8CDD41FBA48AB00F4859F /* AlamofireObjectMapper.framework in Frameworks */,
-				4AC8CDD51FBA48AB00F4859F /* ObjectMapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,7 +256,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A7DF8551FC210F00073B2B4 /* Nimble.framework in Frameworks */,
+				4A749434224ED3ED0030FEE5 /* Nimble.framework in Frameworks */,
+				4A74942E224ED3D80030FEE5 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,9 +265,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A74941E224ECFE40030FEE5 /* ObjectMapper.framework in Frameworks */,
 				4AC8CDD01FBA48A100F4859F /* AlamofireObjectMapper.framework in Frameworks */,
 				4A7DF8531FC210E20073B2B4 /* Alamofire.framework in Frameworks */,
-				4AC8CDD11FBA48A100F4859F /* ObjectMapper.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,7 +275,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A7DF8541FC210EA0073B2B4 /* Nimble.framework in Frameworks */,
+				4A749432224ED3E60030FEE5 /* Nimble.framework in Frameworks */,
+				4A74942C224ED3D10030FEE5 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +330,19 @@
 		4A4E7ABF1FB88F2F001D829A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4A749433224ED3ED0030FEE5 /* Nimble.framework */,
+				4A749431224ED3E60030FEE5 /* Nimble.framework */,
+				4A74942F224ED3E10030FEE5 /* Nimble.framework */,
+				4A74942D224ED3D80030FEE5 /* Quick.framework */,
+				4A74942B224ED3D10030FEE5 /* Quick.framework */,
+				4A749429224ED3C00030FEE5 /* Quick.framework */,
+				4A749425224ED00B0030FEE5 /* Nimble.framework */,
+				4A749423224ED0020030FEE5 /* Nimble.framework */,
+				4A749421224ECFF80030FEE5 /* ObjectMapper.framework */,
+				4A74941F224ECFEE0030FEE5 /* ObjectMapper.framework */,
+				4A74941D224ECFE40030FEE5 /* ObjectMapper.framework */,
+				4A74941B224ECF640030FEE5 /* ObjectMapper.framework */,
+				4A749419224ECF3D0030FEE5 /* Nimble.framework */,
 				4A4E7AC01FB8900E001D829A /* iOS */,
 				4A4E7AC41FB89194001D829A /* macOS */,
 				4A4E7AC51FB891A5001D829A /* tvOS */,
@@ -331,8 +355,6 @@
 			isa = PBXGroup;
 			children = (
 				4AC8CDCA1FBA489600F4859F /* AlamofireObjectMapper.framework */,
-				4AC8CDCB1FBA489700F4859F /* ObjectMapper.framework */,
-				4A4E7AC71FB89229001D829A /* Nimble.framework */,
 				4A4E7AC11FB89016001D829A /* Alamofire.framework */,
 			);
 			name = iOS;
@@ -583,17 +605,17 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0910;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = "Wia Technologies Limited";
 				TargetAttributes = {
 					4A4E7AA51FB88DAA001D829A = {
 						CreatedOnToolsVersion = 9.1;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					4A4E7AAD1FB88DAA001D829A = {
 						CreatedOnToolsVersion = 9.1;
-						LastSwiftMigration = 1010;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 					4A4E7ACD1FB89244001D829A = {
@@ -620,10 +642,9 @@
 			};
 			buildConfigurationList = 607FACCB1AFB9204008FA782 /* Build configuration list for PBXProject "WiaSwift" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
@@ -859,6 +880,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4A1FE82A21F679E300F21EFC /* Development.xcconfig */;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -886,7 +908,7 @@
 				PRODUCT_NAME = WiaSwift;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -896,6 +918,7 @@
 		4A4E7AB91FB88DAA001D829A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -921,7 +944,7 @@
 				PRODUCT_MODULE_NAME = "$(PRODUCT_NAME:c99extidentifier)";
 				PRODUCT_NAME = WiaSwift;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -932,6 +955,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -952,7 +976,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wia.WiaSwift-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -961,6 +985,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -979,7 +1004,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.wia.WiaSwift-iOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1136,6 +1161,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1165,6 +1191,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1267,6 +1294,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1296,6 +1324,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1324,6 +1353,7 @@
 			baseConfigurationReference = 4A4E7ABD1FB88DDE001D829A /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1380,6 +1410,7 @@
 			baseConfigurationReference = 4A4E7ABD1FB88DDE001D829A /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;

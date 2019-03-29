@@ -1,13 +1,6 @@
-[submodule "Carthage/Checkouts/Nimble"]
-	path = Carthage/Checkouts/Nimble
+[submodule "Vendor/Quick"]
+	path = Vendor/Quick
+	url = https://github.com/Quick/Quick.git
+[submodule "Vendor/Nimble"]
+	path = Vendor/Nimble
 	url = https://github.com/Quick/Nimble.git
-	branch = 7.x-branch
-[submodule "Carthage/Checkouts/Alamofire"]
-	path = Carthage/Checkouts/Alamofire
-	url = https://github.com/Alamofire/Alamofire.git
-[submodule "Carthage/Checkouts/AlamofireObjectMapper"]
-	path = Carthage/Checkouts/AlamofireObjectMapper
-	url = https://github.com/openium/AlamofireObjectMapper.git
-[submodule "Carthage/Checkouts/ObjectMapper"]
-	path = Carthage/Checkouts/ObjectMapper
-	url = https://github.com/tristanhimmelman/ObjectMapper.git

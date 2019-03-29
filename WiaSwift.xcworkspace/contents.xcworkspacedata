@@ -5,15 +5,15 @@
       location = "group:WiaSwift.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:Carthage/Checkouts/ObjectMapper/ObjectMapper.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Carthage/Checkouts/Nimble/Nimble.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:Carthage/Checkouts/AlamofireObjectMapper/AlamofireObjectMapper.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Carthage/Checkouts/Alamofire/Alamofire.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Vendor/Nimble/Nimble.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Vendor/Quick/Quick.xcodeproj">
    </FileRef>
 </Workspace>
