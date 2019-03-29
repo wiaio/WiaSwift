@@ -19,4 +19,4 @@ else
   printf "WIA_TEST_SPACE_ID=$WIA_TEST_SPACE_ID" >> Development.xcconfig
 fi
 
-carthage update
+carthage update --platform iOS
