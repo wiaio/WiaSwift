@@ -2,9 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:WiaSwift.xcodeproj">
-   </FileRef>
-   <FileRef
       location = "group:Vendor/Nimble/Nimble.xcodeproj">
    </FileRef>
    <FileRef
@@ -15,5 +12,8 @@
    </FileRef>
    <FileRef
       location = "group:Carthage/Checkouts/AlamofireObjectMapper/AlamofireObjectMapper.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Carthage/Checkouts/AlamofireObjectMapper/../../../WiaSwift.xcodeproj">
    </FileRef>
 </Workspace>
