@@ -21,11 +21,15 @@ open class Space: Mappable  {
     // The owner of this Spaces
     public var owner: Owner?
     
+    // The avatar of this Space
+    public var avatar: Avatar?
+    
     // Constructor
-    init(id: String? = nil, name: String? = nil, owner: Owner? = nil) {
+    init(id: String? = nil, name: String? = nil, owner: Owner? = nil, avatar: Avatar? = nil) {
         self.id = id
         self.name = name
         self.owner = owner
+        self.avatar = avatar
     }
     
     public required init?(){
@@ -40,5 +44,6 @@ open class Space: Mappable  {
         id <- map["id"]
         name <- map["name"]
         owner <- map["owner"]
+        avatar <- map["avatar"]
     }
 }

@@ -73,6 +73,7 @@
 		4A5B9BEC20E0DC7000D00651 /* WidgetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5B9BEA20E0DC6900D00651 /* WidgetTests.swift */; };
 		4A5B9BED20E0DC7000D00651 /* WidgetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5B9BEA20E0DC6900D00651 /* WidgetTests.swift */; };
 		4A5B9BEE20E0DC7100D00651 /* WidgetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5B9BEA20E0DC6900D00651 /* WidgetTests.swift */; };
+		4A5E72F0229082D100628D8D /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5E72EF229082D100628D8D /* Avatar.swift */; };
 		4A60178420DD1A3A00B18ED6 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A60178320DD1A3A00B18ED6 /* Command.swift */; };
 		4A60178520DD1B9200B18ED6 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A60178320DD1A3A00B18ED6 /* Command.swift */; };
 		4A60178620DD1B9300B18ED6 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A60178320DD1A3A00B18ED6 /* Command.swift */; };
@@ -180,6 +181,7 @@
 		4A4E7B1F1FB89405001D829A /* WiaSwift_Info_tvOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = WiaSwift_Info_tvOS.plist; path = "Supporting Files/WiaSwift_Info_tvOS.plist"; sourceTree = "<group>"; };
 		4A4E7B211FB8940D001D829A /* WiaSwift_Info_watchOS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = WiaSwift_Info_watchOS.plist; path = "Supporting Files/WiaSwift_Info_watchOS.plist"; sourceTree = "<group>"; };
 		4A5B9BEA20E0DC6900D00651 /* WidgetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WidgetTests.swift; sourceTree = "<group>"; };
+		4A5E72EF229082D100628D8D /* Avatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
 		4A60178320DD1A3A00B18ED6 /* Command.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		4A749419224ECF3D0030FEE5 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A74941B224ECF640030FEE5 /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -304,6 +306,7 @@
 				4A1A6B581FBAFC8200AE1B45 /* AccessToken.swift */,
 				4A1A6B5A1FBAFCD000AE1B45 /* User.swift */,
 				4A4E7A9C1FB88B83001D829A /* Space.swift */,
+				4A5E72EF229082D100628D8D /* Avatar.swift */,
 				4A1A6B711FBB69C600AE1B45 /* Event.swift */,
 				4A60178320DD1A3A00B18ED6 /* Command.swift */,
 				4AA753AF20DE76A400221AB1 /* Widget.swift */,
@@ -733,6 +736,7 @@
 				4A1FE82121F6662B00F21EFC /* DeviceType.swift in Sources */,
 				4A2987F72084D32000BFE452 /* WiaId.swift in Sources */,
 				4A4B071122463F660017BA3B /* DeviceApiKey.swift in Sources */,
+				4A5E72F0229082D100628D8D /* Avatar.swift in Sources */,
 				4A1A6B5B1FBAFCD000AE1B45 /* User.swift in Sources */,
 				4A1A6B651FBAFDF100AE1B45 /* WiaError.swift in Sources */,
 				4A1FE82621F671F200F21EFC /* Flow.swift in Sources */,
