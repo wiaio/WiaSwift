@@ -331,12 +331,16 @@ open class Wia {
     public func signupUser(fullName: String,
                     username: String,
                    password: String,
+                   over13Consent: Bool = false,
+                   newsletterConsent: Bool = false,
                    onSuccess success: @escaping (User) -> Void,
                    onFailure failure: @escaping (WiaError) -> Void) {
         let parameters: Parameters = [
             "fullName": fullName,
             "emailAddress": username,
-            "password": password
+            "password": password,
+            "over13Consent": over13Consent,
+            "newsletterConsent":newsletterConsent
         ]
         
         Alamofire.request(requestUrl(path: "/users"),

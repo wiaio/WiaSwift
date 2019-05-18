@@ -70,29 +70,48 @@ class UserTests: XCTestCase {
         waitForExpectations(timeout: 10.0, handler: nil)
     }
     
-//    func testSignupUser() {
-//        UserTests.client.reset()
-//        UserTests.client.clientKey = "ck_gJFaBw3CLpwDuMHzuwCpkTdG2NskS"
-//
-//        let expectation = self.expectation(description: "Signs up a user")
-//
-//        let fullName = HelperUtils.randomString(length: 16) + " " + HelperUtils.randomString(length: 16)
-//        let username = HelperUtils.randomString(length: 16) + "@" + HelperUtils.randomString(length: 16) + ".com"
-//        let password = HelperUtils.randomString(length: 16)
-//
-//        UserTests.client.signupUser(fullName: fullName, username: username, password: password, onSuccess: { user in
-//            expect(user).to(beAKindOf(User.self))
-//            expect(user.id).notTo(beNil())
-//            expect(user.fullName).notTo(beNil())
-//            expectation.fulfill()
-//        }, onFailure: { error in
-//            expect(error).to(beAKindOf(WiaError.self))
-//            fail("Error status code \(error.status!)")
-//            expectation.fulfill()
-//        })
-//
-//        waitForExpectations(timeout: 10.0, handler: nil)
-//    }
+    func testSignupUser() {
+        let expectation = self.expectation(description: "Signs up a user")
+
+        let fullName = HelperUtils.randomString(length: 16) + " " + HelperUtils.randomString(length: 16)
+        let username = HelperUtils.randomString(length: 16) + "@" + HelperUtils.randomString(length: 16) + ".com"
+        let password = HelperUtils.randomString(length: 16)
+
+        UserTests.client.signupUser(fullName: fullName, username: username, password: password, onSuccess: { user in
+            expect(user).to(beAKindOf(User.self))
+            expect(user.id).notTo(beNil())
+            expect(user.fullName).notTo(beNil())
+            expectation.fulfill()
+        }, onFailure: { error in
+            expect(error).to(beAKindOf(WiaError.self))
+            fail("Error status code \(error.status!)")
+            expectation.fulfill()
+        })
+
+        waitForExpectations(timeout: 10.0, handler: nil)
+    }
+    
+    func testSignupUserExtraParams() {
+        let expectation = self.expectation(description: "Signs up a user")
+        
+        let fullName = HelperUtils.randomString(length: 16) + " " + HelperUtils.randomString(length: 16)
+        let username = HelperUtils.randomString(length: 16) + "@" + HelperUtils.randomString(length: 16) + ".com"
+        let password = HelperUtils.randomString(length: 16)
+        
+        UserTests.client.signupUser(fullName: fullName, username: username, password: password, over13Consent: true, newsletterConsent: false, onSuccess: { user in
+            expect(user).to(beAKindOf(User.self))
+            expect(user.id).notTo(beNil())
+            expect(user.fullName).notTo(beNil())
+            expectation.fulfill()
+        }, onFailure: { error in
+            expect(error).to(beAKindOf(WiaError.self))
+            fail("Error status code \(error.status!)")
+            expectation.fulfill()
+        })
+        
+        waitForExpectations(timeout: 10.0, handler: nil)
+    }
+
     
 //    func testLoginUser() {
 //        UserTests.client.reset()
