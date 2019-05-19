@@ -25,9 +25,11 @@ open class User: Mappable  {
     public var emailAddress: String?
 
     // Constructor
-    init(id: String? = nil, fullName: String? = nil) {
+    init(id: String? = nil, fullName: String? = nil, username: String? = nil, emailAddress: String? = nil) {
         self.id = id
         self.fullName = fullName
+        self.username = username
+        self.emailAddress = emailAddress
     }
     
     public required init?(){

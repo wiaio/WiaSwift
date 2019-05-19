@@ -18,18 +18,16 @@ open class Space: Mappable  {
     /// The name of this Space
     public var name: String?
     
-    // The owner of this Spaces
+    // The owner of this Space
     public var owner: Owner?
     
     // The avatar of this Space
     public var avatar: Avatar?
     
     // Constructor
-    init(id: String? = nil, name: String? = nil, owner: Owner? = nil, avatar: Avatar? = nil) {
+    init(id: String? = nil, name: String? = nil) {
         self.id = id
         self.name = name
-        self.owner = owner
-        self.avatar = avatar
     }
     
     public required init?(){
