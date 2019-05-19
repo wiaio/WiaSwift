@@ -74,7 +74,7 @@ class SpaceTests: XCTestCase {
             expect(spaces).to(beAKindOf(Array<Space>.self))
             let space = spaces[0]
             expect(space.id).notTo(beNil())
-            
+                        
             client.retrieveSpace(id: space.id!, onSuccess: { space in
                 expect(space).to(beAKindOf(Space.self))
                 expectation.fulfill()

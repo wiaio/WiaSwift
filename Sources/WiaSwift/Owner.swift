@@ -19,11 +19,9 @@ open class Owner: Mappable  {
     public var organisation: Organisation?
     
     // Constructor
-    init(user: User? = nil, organisation: Organisation? = nil) {
-        self.user = user
-        self.organisation = organisation
-    }
-    
+//    init() {
+//    }
+//    
     public required init?(){
         
     }

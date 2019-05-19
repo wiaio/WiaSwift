@@ -99,8 +99,7 @@ open class Wia {
                     onSuccess success: @escaping ([Space],Int?) -> Void,
                     onFailure failure: @escaping (WiaError) -> Void) {
         let params: [String:String] = [
-            "limit": limit != nil ? "\(String(describing: limit))" : "40",
-            "page": page != nil ? "\(String(describing: page))" : "0",
+            "limit": limit != nil ? "\(String(describing: limit))" : "100"
         ]
 
         Alamofire.request(requestUrl(path: "/spaces"),
@@ -119,8 +118,10 @@ open class Wia {
                     s.avatar = space.avatar
                     newSpaceArray.append(s)
                 })
-                
+
                 success(newSpaceArray, newSpaceArray.count)
+                
+                //                success(spaces, spaces.count)
                 return
             case .failure:
                 let wiaError = WiaError(status: response.response?.statusCode)
