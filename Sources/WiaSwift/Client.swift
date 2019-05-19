@@ -54,7 +54,7 @@ open class Wia {
             "name": name
         ]
 
-        Alamofire.request(requestUrl(path: "/spaces"),
+        AF.request(requestUrl(path: "/spaces"),
                           method: .post,
                           parameters: parameters,
                           encoding: JSONEncoding.default,
@@ -76,7 +76,7 @@ open class Wia {
     public func retrieveSpace(id: String,
                     onSuccess success: @escaping (Space) -> Void,
                     onFailure failure: @escaping (WiaError) -> Void) {
-        Alamofire.request(requestUrl(path: "/spaces/" + id),
+        AF.request(requestUrl(path: "/spaces/" + id),
                           method: .get,
                           encoding: JSONEncoding.default,
                           headers: self.generateHeaders()
@@ -102,7 +102,7 @@ open class Wia {
             "limit": limit != nil ? "\(String(describing: limit))" : "100"
         ]
 
-        Alamofire.request(requestUrl(path: "/spaces"),
+        AF.request(requestUrl(path: "/spaces"),
                           method: .get,
                           parameters: params,
                           headers: self.generateHeaders()
@@ -148,7 +148,7 @@ open class Wia {
             parameters["serialNumber"] = serialNumber
         }
         
-        Alamofire.request(requestUrl(path: "/devices"),
+        AF.request(requestUrl(path: "/devices"),
                           method: .post,
                           parameters: parameters,
                           encoding: JSONEncoding.default,
@@ -170,7 +170,7 @@ open class Wia {
     public func retrieveDevice(id: String,
                        onSuccess success: @escaping (Device) -> Void,
                        onFailure failure: @escaping (WiaError) -> Void) {
-        Alamofire.request(requestUrl(path: "/devices/" + id),
+        AF.request(requestUrl(path: "/devices/" + id),
                           method: .get,
                           headers: self.generateHeaders()
             ).validate().responseObject { (response: DataResponse<Device>) in
@@ -197,7 +197,7 @@ open class Wia {
         
         let devicesEndpoint: String = requestUrl(path: "/devices");
         
-        Alamofire.request(devicesEndpoint,
+        AF.request(devicesEndpoint,
                           method: .get,
                           parameters: params,
                           headers: self.generateHeaders()
@@ -222,7 +222,7 @@ open class Wia {
         
         let devicesEndpoint: String = requestUrl(path: "/devices/types");
         
-        Alamofire.request(devicesEndpoint,
+        AF.request(devicesEndpoint,
                           method: .get,
                           headers: self.generateHeaders()
             ).validate().responseArray(keyPath: "deviceTypes") { (response: DataResponse<[DeviceType]>) in
@@ -244,7 +244,7 @@ open class Wia {
     public func retrieveDeviceApiKey(id: String,
                              onSuccess success: @escaping (DeviceApiKey) -> Void,
                              onFailure failure: @escaping (WiaError) -> Void) {
-        Alamofire.request(requestUrl(path: "/devices/" + id + "/apiKeys"),
+        AF.request(requestUrl(path: "/devices/" + id + "/apiKeys"),
                           method: .get,
                           encoding: JSONEncoding.default,
                           headers: self.generateHeaders()
@@ -266,7 +266,7 @@ open class Wia {
     public func retrieveUser(id: String,
                         onSuccess success: @escaping (User) -> Void,
                         onFailure failure: @escaping (WiaError) -> Void) {
-        Alamofire.request(requestUrl(path: "/users/" + id),
+        AF.request(requestUrl(path: "/users/" + id),
                           method: .get,
                           encoding: JSONEncoding.default,
                           headers: self.generateHeaders()
@@ -292,7 +292,7 @@ open class Wia {
         
         let params = ["space.id": spaceId]
         
-        Alamofire.request(requestUrl(path: "/users"),
+        AF.request(requestUrl(path: "/users"),
                           method: .get,
                           parameters: params,
                           headers: self.generateHeaders()
@@ -322,7 +322,7 @@ open class Wia {
             "grantType": "password"
         ]
 
-        Alamofire.request(requestUrl(path: "/auth/token"),
+        AF.request(requestUrl(path: "/auth/token"),
                           method: .post,
                           parameters: parameters,
                           encoding: JSONEncoding.default,
@@ -356,7 +356,7 @@ open class Wia {
             "newsletterConsent":newsletterConsent
         ]
         
-        Alamofire.request(requestUrl(path: "/users"),
+        AF.request(requestUrl(path: "/users"),
                           method: .post,
                           parameters: parameters,
                           encoding: JSONEncoding.default,
@@ -389,7 +389,7 @@ open class Wia {
             "type": type
         ]
         
-        Alamofire.request(requestUrl(path: "/notifications/register"),
+        AF.request(requestUrl(path: "/notifications/register"),
                           method: .post,
                           parameters: parameters,
                           encoding: JSONEncoding.default,
@@ -418,7 +418,7 @@ open class Wia {
             "slug": commandSlug
         ]
         
-        Alamofire.request(requestUrl(path: "/commands/run"),
+        AF.request(requestUrl(path: "/commands/run"),
                           method: .post,
                           parameters: parameters,
                           encoding: JSONEncoding.default,
@@ -445,7 +445,7 @@ open class Wia {
         
         let params = ["device.id": deviceId]
         
-        Alamofire.request(requestUrl(path: "/commands"),
+        AF.request(requestUrl(path: "/commands"),
                           method: .get,
                           parameters: params,
                           headers: self.generateHeaders()
@@ -472,7 +472,7 @@ open class Wia {
         
         let params = ["device.id": deviceId]
         
-        Alamofire.request(requestUrl(path: "/widgets"),
+        AF.request(requestUrl(path: "/widgets"),
                           method: .get,
                           parameters: params,
                           headers: self.generateHeaders()

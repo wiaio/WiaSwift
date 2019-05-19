@@ -1,3 +1,3 @@
-github "Alamofire/Alamofire" "5.0.0.beta.1"
-github "openium/AlamofireObjectMapper" "b933e7816faa0c76a8d227b4e4c3323ab3cf6e9f"
+github "Alamofire/Alamofire" "5.0.0-beta.6"
+github "tristanhimmelman/AlamofireObjectMapper" "48965790f38f9a2a918c9d25ee71553b97dfa5c8"
 github "tristanhimmelman/ObjectMapper" "3.4.2"
