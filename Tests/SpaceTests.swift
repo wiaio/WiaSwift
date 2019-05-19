@@ -54,6 +54,10 @@ class SpaceTests: XCTestCase {
             
             for space in spaces {
                 expect(space).to(beAKindOf(Space.self));
+                expect(space.id).toNot(beNil())
+                expect(space.name).toNot(beNil())
+                expect(space.owner).to(beAKindOf(Owner.self));
+                expect(space.avatar).to(beAKindOf(Avatar.self));
             }
 
             expectation.fulfill()
