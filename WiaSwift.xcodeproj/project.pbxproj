@@ -80,7 +80,6 @@
 		4A60178720DD1B9400B18ED6 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A60178320DD1A3A00B18ED6 /* Command.swift */; };
 		4A7313E01FB907630092C7FB /* ClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* ClientTests.swift */; };
 		4A7313E11FB907630092C7FB /* ClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* ClientTests.swift */; };
-		4A74941C224ECF640030FEE5 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A74941B224ECF640030FEE5 /* ObjectMapper.framework */; };
 		4A74941E224ECFE40030FEE5 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A74941D224ECFE40030FEE5 /* ObjectMapper.framework */; };
 		4A749420224ECFEE0030FEE5 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A74941F224ECFEE0030FEE5 /* ObjectMapper.framework */; };
 		4A749422224ECFF80030FEE5 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A749421224ECFF80030FEE5 /* ObjectMapper.framework */; };
@@ -91,6 +90,7 @@
 		4A749432224ED3E60030FEE5 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A749431224ED3E60030FEE5 /* Nimble.framework */; };
 		4A749434224ED3ED0030FEE5 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A749433224ED3ED0030FEE5 /* Nimble.framework */; };
 		4A7DF8531FC210E20073B2B4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A4E7B0E1FB892CB001D829A /* Alamofire.framework */; };
+		4AA713A62291BAF500281A12 /* ObjectMapper.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AA713A52291BAF500281A12 /* ObjectMapper.framework */; };
 		4AA753AC20DE767300221AB1 /* CommandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA753AA20DE766E00221AB1 /* CommandTests.swift */; };
 		4AA753AD20DE767300221AB1 /* CommandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA753AA20DE766E00221AB1 /* CommandTests.swift */; };
 		4AA753AE20DE767400221AB1 /* CommandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA753AA20DE766E00221AB1 /* CommandTests.swift */; };
@@ -196,6 +196,7 @@
 		4A74942F224ED3E10030FEE5 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A749431224ED3E60030FEE5 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A749433224ED3ED0030FEE5 /* Nimble.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Nimble.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4AA713A52291BAF500281A12 /* ObjectMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ObjectMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AA753AA20DE766E00221AB1 /* CommandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandTests.swift; sourceTree = "<group>"; };
 		4AA753AF20DE76A400221AB1 /* Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Widget.swift; sourceTree = "<group>"; };
 		4AC8CDB11FB9B76F00F4859F /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
@@ -219,7 +220,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A74941C224ECF640030FEE5 /* ObjectMapper.framework in Frameworks */,
+				4AA713A62291BAF500281A12 /* ObjectMapper.framework in Frameworks */,
 				4A012473224E2CA90031E7A1 /* Alamofire.framework in Frameworks */,
 				4A1088E72246386B0007DF20 /* AlamofireObjectMapper.framework in Frameworks */,
 			);
@@ -333,6 +334,7 @@
 		4A4E7ABF1FB88F2F001D829A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4AA713A52291BAF500281A12 /* ObjectMapper.framework */,
 				4A749433224ED3ED0030FEE5 /* Nimble.framework */,
 				4A749431224ED3E60030FEE5 /* Nimble.framework */,
 				4A74942F224ED3E10030FEE5 /* Nimble.framework */,

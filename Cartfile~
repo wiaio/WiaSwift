@@ -1,0 +1,3 @@
+github "Alamofire/Alamofire" == 4.8.2
+github "openium/AlamofireObjectMapper" == 5.2.1
+

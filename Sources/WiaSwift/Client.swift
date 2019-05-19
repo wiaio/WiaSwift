@@ -54,7 +54,7 @@ open class Wia {
             "name": name
         ]
 
-        AF.request(requestUrl(path: "/spaces"),
+        Alamofire.request(requestUrl(path: "/spaces"),
                           method: .post,
                           parameters: parameters,
                           encoding: JSONEncoding.default,
@@ -62,7 +62,7 @@ open class Wia {
             ).validate().responseObject { (response: DataResponse<Space>) in
                 switch response.result {
                 case .success:
-                    let space = response.value!
+                    let space = response.result.value!
                     success(space)
                     return
                 case .failure:
@@ -76,14 +76,14 @@ open class Wia {
     public func retrieveSpace(id: String,
                     onSuccess success: @escaping (Space) -> Void,
                     onFailure failure: @escaping (WiaError) -> Void) {
-        AF.request(requestUrl(path: "/spaces/" + id),
+        Alamofire.request(requestUrl(path: "/spaces/" + id),
                           method: .get,
                           encoding: JSONEncoding.default,
                           headers: self.generateHeaders()
             ).validate().responseObject { (response: DataResponse<Space>) in
                 switch response.result {
                 case .success:
-                    let space = response.value!
+                    let space = response.result.value!
                     success(space)
                     return
                 case .failure:
@@ -102,24 +102,24 @@ open class Wia {
             "limit": limit != nil ? "\(String(describing: limit))" : "100"
         ]
 
-        AF.request(requestUrl(path: "/spaces"),
+        Alamofire.request(requestUrl(path: "/spaces"),
                           method: .get,
                           parameters: params,
                           headers: self.generateHeaders()
             ).validate().responseArray(keyPath: "spaces") { (response: DataResponse<[Space]>) in
             switch response.result {
             case .success:
-//                let spaces = response.result.value ?? []
+                let spaces = response.result.value ?? []
 
-                var newSpaceArray:[Space] = []
-                response.value?.forEach({ (space) in
-                    let s:Space = Space.init(id: space.id, name: space.name)
-                    s.owner = space.owner
-                    s.avatar = space.avatar
-                    newSpaceArray.append(s)
-                })
+//                var newSpaceArray:[Space] = []
+//                response.result.value!?.forEach({ (space) in
+//                    let s:Space = Space.init(id: space.id, name: space.name)
+//                    s.owner = space.owner
+//                    s.avatar = space.avatar
+//                    newSpaceArray.append(s)
+//                })
 
-                success(newSpaceArray, newSpaceArray.count)
+                success(spaces, spaces.count)
                 
                 //                success(spaces, spaces.count)
                 return
@@ -148,7 +148,7 @@ open class Wia {
             parameters["serialNumber"] = serialNumber
         }
         
-        AF.request(requestUrl(path: "/devices"),
+        Alamofire.request(requestUrl(path: "/devices"),
                           method: .post,
                           parameters: parameters,
                           encoding: JSONEncoding.default,
@@ -156,7 +156,7 @@ open class Wia {
             ).validate().responseObject { (response: DataResponse<Device>) in
                 switch response.result {
                 case .success:
-                    let device = response.value!
+                    let device = response.result.value!
                     success(device)
                     return
                 case .failure:
@@ -170,13 +170,13 @@ open class Wia {
     public func retrieveDevice(id: String,
                        onSuccess success: @escaping (Device) -> Void,
                        onFailure failure: @escaping (WiaError) -> Void) {
-        AF.request(requestUrl(path: "/devices/" + id),
+        Alamofire.request(requestUrl(path: "/devices/" + id),
                           method: .get,
                           headers: self.generateHeaders()
             ).validate().responseObject { (response: DataResponse<Device>) in
                 switch response.result {
                 case .success:
-                    let device = response.value!
+                    let device = response.result.value!
                     success(device)
                     return
                 case .failure:
@@ -197,7 +197,7 @@ open class Wia {
         
         let devicesEndpoint: String = requestUrl(path: "/devices");
         
-        AF.request(devicesEndpoint,
+        Alamofire.request(devicesEndpoint,
                           method: .get,
                           parameters: params,
                           headers: self.generateHeaders()
@@ -206,7 +206,7 @@ open class Wia {
 
                 switch response.result {
                 case .success:
-                    let devices = response.value ?? []
+                    let devices = response.result.value! ?? []
                     success(devices, devices.count)
                     return
                 case .failure:
@@ -222,7 +222,7 @@ open class Wia {
         
         let devicesEndpoint: String = requestUrl(path: "/devices/types");
         
-        AF.request(devicesEndpoint,
+        Alamofire.request(devicesEndpoint,
                           method: .get,
                           headers: self.generateHeaders()
             ).validate().responseArray(keyPath: "deviceTypes") { (response: DataResponse<[DeviceType]>) in
@@ -230,7 +230,7 @@ open class Wia {
                 
                 switch response.result {
                 case .success:
-                    let deviceTypes = response.value ?? []
+                    let deviceTypes = response.result.value! ?? []
                     success(deviceTypes,deviceTypes.count)
                     return
                 case .failure:
@@ -244,14 +244,14 @@ open class Wia {
     public func retrieveDeviceApiKey(id: String,
                              onSuccess success: @escaping (DeviceApiKey) -> Void,
                              onFailure failure: @escaping (WiaError) -> Void) {
-        AF.request(requestUrl(path: "/devices/" + id + "/apiKeys"),
+        Alamofire.request(requestUrl(path: "/devices/" + id + "/apiKeys"),
                           method: .get,
                           encoding: JSONEncoding.default,
                           headers: self.generateHeaders()
             ).validate().responseObject { (response: DataResponse<DeviceApiKey>) in
                 switch response.result {
                 case .success:
-                    let apiKey = response.value!
+                    let apiKey = response.result.value!
                     success(apiKey)
                     return
                 case .failure:
@@ -266,14 +266,14 @@ open class Wia {
     public func retrieveUser(id: String,
                         onSuccess success: @escaping (User) -> Void,
                         onFailure failure: @escaping (WiaError) -> Void) {
-        AF.request(requestUrl(path: "/users/" + id),
+        Alamofire.request(requestUrl(path: "/users/" + id),
                           method: .get,
                           encoding: JSONEncoding.default,
                           headers: self.generateHeaders()
             ).validate().responseObject { (response: DataResponse<User>) in
                 switch response.result {
                 case .success:
-                    let user = response.value!
+                    let user = response.result.value!
                     success(user)
                     return
                 case .failure:
@@ -292,14 +292,14 @@ open class Wia {
         
         let params = ["space.id": spaceId]
         
-        AF.request(requestUrl(path: "/users"),
+        Alamofire.request(requestUrl(path: "/users"),
                           method: .get,
                           parameters: params,
                           headers: self.generateHeaders()
             ).validate().responseArray(keyPath: "users") { (response: DataResponse<[User]>) in
                 switch response.result {
                 case .success:
-                    let users = response.value ?? []
+                    let users = response.result.value! ?? []
                     success(users,users.count)
                     return
                 case .failure:
@@ -322,7 +322,7 @@ open class Wia {
             "grantType": "password"
         ]
 
-        AF.request(requestUrl(path: "/auth/token"),
+        Alamofire.request(requestUrl(path: "/auth/token"),
                           method: .post,
                           parameters: parameters,
                           encoding: JSONEncoding.default,
@@ -330,7 +330,7 @@ open class Wia {
             ).validate().responseObject { (response: DataResponse<AccessToken>) in
                 switch response.result {
                 case .success:
-                    let accessToken = response.value!
+                    let accessToken = response.result.value!
                     success(accessToken)
                     return
                 case .failure:
@@ -356,7 +356,7 @@ open class Wia {
             "newsletterConsent":newsletterConsent
         ]
         
-        AF.request(requestUrl(path: "/users"),
+        Alamofire.request(requestUrl(path: "/users"),
                           method: .post,
                           parameters: parameters,
                           encoding: JSONEncoding.default,
@@ -364,7 +364,7 @@ open class Wia {
             ).validate().responseObject { (response: DataResponse<User>) in
                 switch response.result {
                 case .success:
-                    let user = response.value!
+                    let user = response.result.value!
                     success(user)
                     return
                 case .failure:
@@ -389,7 +389,7 @@ open class Wia {
             "type": type
         ]
         
-        AF.request(requestUrl(path: "/notifications/register"),
+        Alamofire.request(requestUrl(path: "/notifications/register"),
                           method: .post,
                           parameters: parameters,
                           encoding: JSONEncoding.default,
@@ -397,7 +397,7 @@ open class Wia {
             ).validate().responseObject { (response: DataResponse<WiaId>) in
                 switch response.result {
                 case .success:
-                    let wiaId = response.value!
+                    let wiaId = response.result.value!
                     success(wiaId)
                     return
                 case .failure:
@@ -418,7 +418,7 @@ open class Wia {
             "slug": commandSlug
         ]
         
-        AF.request(requestUrl(path: "/commands/run"),
+        Alamofire.request(requestUrl(path: "/commands/run"),
                           method: .post,
                           parameters: parameters,
                           encoding: JSONEncoding.default,
@@ -426,7 +426,7 @@ open class Wia {
             ).validate().responseObject { (response: DataResponse<CommandStatus>) in
                 switch response.result {
                 case .success:
-                    let commandStatus = response.value!
+                    let commandStatus = response.result.value!
                     success(commandStatus)
                     return
                 case .failure:
@@ -445,14 +445,14 @@ open class Wia {
         
         let params = ["device.id": deviceId]
         
-        AF.request(requestUrl(path: "/commands"),
+        Alamofire.request(requestUrl(path: "/commands"),
                           method: .get,
                           parameters: params,
                           headers: self.generateHeaders()
             ).validate().responseArray(keyPath: "commands") { (response: DataResponse<[Command]>) in
                 switch response.result {
                 case .success:
-                    let commands = response.value ?? []
+                    let commands = response.result.value! ?? []
                     success(commands,commands.count)
                     return
                 case .failure:
@@ -472,14 +472,14 @@ open class Wia {
         
         let params = ["device.id": deviceId]
         
-        AF.request(requestUrl(path: "/widgets"),
+        Alamofire.request(requestUrl(path: "/widgets"),
                           method: .get,
                           parameters: params,
                           headers: self.generateHeaders()
             ).validate().responseArray(keyPath: "widgets") { (response: DataResponse<[Widget]>) in
                 switch response.result {
                 case .success:
-                    let widgets = response.value ?? []
+                    let widgets = response.result.value ?? []
                     success(widgets,widgets.count)
                     return
                 case .failure:
