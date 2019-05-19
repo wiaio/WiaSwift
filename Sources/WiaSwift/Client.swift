@@ -62,7 +62,7 @@ open class Wia {
             ).validate().responseObject { (response: DataResponse<Space>) in
                 switch response.result {
                 case .success:
-                    let space = response.result.value!
+                    let space = response.value!
                     success(space)
                     return
                 case .failure:
@@ -83,7 +83,7 @@ open class Wia {
             ).validate().responseObject { (response: DataResponse<Space>) in
                 switch response.result {
                 case .success:
-                    let space = response.result.value!
+                    let space = response.value!
                     success(space)
                     return
                 case .failure:
@@ -112,7 +112,7 @@ open class Wia {
 //                let spaces = response.result.value ?? []
 
                 var newSpaceArray:[Space] = []
-                response.result.value?.forEach({ (space) in
+                response.value?.forEach({ (space) in
                     let s:Space = Space.init(id: space.id, name: space.name)
                     s.owner = space.owner
                     s.avatar = space.avatar
@@ -156,7 +156,7 @@ open class Wia {
             ).validate().responseObject { (response: DataResponse<Device>) in
                 switch response.result {
                 case .success:
-                    let device = response.result.value!
+                    let device = response.value!
                     success(device)
                     return
                 case .failure:
@@ -176,7 +176,7 @@ open class Wia {
             ).validate().responseObject { (response: DataResponse<Device>) in
                 switch response.result {
                 case .success:
-                    let device = response.result.value!
+                    let device = response.value!
                     success(device)
                     return
                 case .failure:
@@ -206,8 +206,8 @@ open class Wia {
 
                 switch response.result {
                 case .success:
-                    let devices = response.result.value ?? []
-                    success(devices,devices.count)
+                    let devices = response.value ?? []
+                    success(devices, devices.count)
                     return
                 case .failure:
                     let wiaError = WiaError(status: response.response?.statusCode)
@@ -230,7 +230,7 @@ open class Wia {
                 
                 switch response.result {
                 case .success:
-                    let deviceTypes = response.result.value ?? []
+                    let deviceTypes = response.value ?? []
                     success(deviceTypes,deviceTypes.count)
                     return
                 case .failure:
@@ -251,7 +251,7 @@ open class Wia {
             ).validate().responseObject { (response: DataResponse<DeviceApiKey>) in
                 switch response.result {
                 case .success:
-                    let apiKey = response.result.value!
+                    let apiKey = response.value!
                     success(apiKey)
                     return
                 case .failure:
@@ -273,7 +273,7 @@ open class Wia {
             ).validate().responseObject { (response: DataResponse<User>) in
                 switch response.result {
                 case .success:
-                    let user = response.result.value!
+                    let user = response.value!
                     success(user)
                     return
                 case .failure:
@@ -299,7 +299,7 @@ open class Wia {
             ).validate().responseArray(keyPath: "users") { (response: DataResponse<[User]>) in
                 switch response.result {
                 case .success:
-                    let users = response.result.value ?? []
+                    let users = response.value ?? []
                     success(users,users.count)
                     return
                 case .failure:
@@ -330,7 +330,7 @@ open class Wia {
             ).validate().responseObject { (response: DataResponse<AccessToken>) in
                 switch response.result {
                 case .success:
-                    let accessToken = response.result.value!
+                    let accessToken = response.value!
                     success(accessToken)
                     return
                 case .failure:
@@ -364,7 +364,7 @@ open class Wia {
             ).validate().responseObject { (response: DataResponse<User>) in
                 switch response.result {
                 case .success:
-                    let user = response.result.value!
+                    let user = response.value!
                     success(user)
                     return
                 case .failure:
@@ -397,7 +397,7 @@ open class Wia {
             ).validate().responseObject { (response: DataResponse<WiaId>) in
                 switch response.result {
                 case .success:
-                    let wiaId = response.result.value!
+                    let wiaId = response.value!
                     success(wiaId)
                     return
                 case .failure:
@@ -426,7 +426,7 @@ open class Wia {
             ).validate().responseObject { (response: DataResponse<CommandStatus>) in
                 switch response.result {
                 case .success:
-                    let commandStatus = response.result.value!
+                    let commandStatus = response.value!
                     success(commandStatus)
                     return
                 case .failure:
@@ -452,7 +452,7 @@ open class Wia {
             ).validate().responseArray(keyPath: "commands") { (response: DataResponse<[Command]>) in
                 switch response.result {
                 case .success:
-                    let commands = response.result.value ?? []
+                    let commands = response.value ?? []
                     success(commands,commands.count)
                     return
                 case .failure:
@@ -479,7 +479,7 @@ open class Wia {
             ).validate().responseArray(keyPath: "widgets") { (response: DataResponse<[Widget]>) in
                 switch response.result {
                 case .success:
-                    let widgets = response.result.value ?? []
+                    let widgets = response.value ?? []
                     success(widgets,widgets.count)
                     return
                 case .failure:
