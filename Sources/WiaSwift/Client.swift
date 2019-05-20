@@ -262,6 +262,28 @@ open class Wia {
         }
     }
 
+    public func sendDeviceGetStarted(deviceId: String,
+                             onSuccess success: @escaping (Device) -> Void,
+                             onFailure failure: @escaping (WiaError) -> Void) {
+        
+        Alamofire.request(requestUrl(path: "/devices/\(deviceId)/sendGetStarted"),
+                          method: .post,
+                          encoding: JSONEncoding.default,
+                          headers: self.generateHeaders()
+            ).validate().responseObject { (response: DataResponse<Device>) in
+                switch response.result {
+                case .success:
+                    let device = response.result.value!
+                    success(device)
+                    return
+                case .failure:
+                    let wiaError = WiaError(status: response.response?.statusCode)
+                    failure(wiaError)
+                    return
+                }
+        }
+    }
+
     // Users
     public func retrieveUser(id: String,
                         onSuccess success: @escaping (User) -> Void,
