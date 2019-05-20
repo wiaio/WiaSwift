@@ -546,6 +546,38 @@ open class Wia {
         }
     }
 
+    public func listLocations(deviceId: String,
+                           limit: Int? = nil,
+                           page: Int? = nil,
+                           onSuccess success: @escaping ([Location],Int?) -> Void,
+                           onFailure failure: @escaping (WiaError) -> Void) {
+        
+        let params = [
+            "device.id": deviceId,
+            "limit": limit != nil ? "\(String(describing: limit))" : "100"
+        ]
+        
+        let eventsEndpoint: String = requestUrl(path: "/locations");
+        
+        Alamofire.request(eventsEndpoint,
+                          method: .get,
+                          parameters: params,
+                          headers: self.generateHeaders()
+            ).validate().responseArray(keyPath: "locations") { (response: DataResponse<[Location]>) in
+                debugPrint(response)
+                
+                switch response.result {
+                case .success:
+                    let locations = response.result.value!
+                    success(locations, locations.count)
+                    return
+                case .failure:
+                    let wiaError = WiaError(status: response.response?.statusCode)
+                    failure(wiaError)
+                    return
+                }
+        }
+    }
 
     private func requestUrl(path: String) -> String {
         return "https://" + baseURL + path

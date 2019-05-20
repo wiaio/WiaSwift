@@ -49,7 +49,14 @@ open class Location: Mappable  {
         latitude <- map["latitude"]
         longitude <- map["longitude"]
         altitude <- map["altitude"]
-        timestamp <- (map["timestamp"], MilisecondDateTransform())
+        
+        let timestampNum = Int(String(describing: map["timestamp"]))
+        
+        if (timestampNum != nil) {
+            timestamp <- (map["timestamp"], MilisecondDateTransform())
+        } else {
+            timestamp <- (map["timestamp"], NativeISO8601DateTransform())
+        }
     }
 }
 
