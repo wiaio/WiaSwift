@@ -474,7 +474,7 @@ open class Wia {
             ).validate().responseArray(keyPath: "commands") { (response: DataResponse<[Command]>) in
                 switch response.result {
                 case .success:
-                    let commands = response.result.value! ?? []
+                    let commands = response.result.value!
                     success(commands,commands.count)
                     return
                 case .failure:
@@ -511,6 +511,41 @@ open class Wia {
                 }
         }
     }
+    
+    // Events
+    public func listEvents(deviceId: String,
+                            limit: Int? = nil,
+                            page: Int? = nil,
+                            onSuccess success: @escaping ([Event],Int?) -> Void,
+                            onFailure failure: @escaping (WiaError) -> Void) {
+        
+        let params = [
+            "device.id": deviceId,
+            "limit": limit != nil ? "\(String(describing: limit))" : "100"
+            ]
+        
+        let eventsEndpoint: String = requestUrl(path: "/events");
+
+        Alamofire.request(eventsEndpoint,
+                          method: .get,
+                          parameters: params,
+                          headers: self.generateHeaders()
+            ).validate().responseArray(keyPath: "devices") { (response: DataResponse<[Event]>) in
+                debugPrint(response)
+                
+                switch response.result {
+                case .success:
+                    let events = response.result.value!
+                    success(events, events.count)
+                    return
+                case .failure:
+                    let wiaError = WiaError(status: response.response?.statusCode)
+                    failure(wiaError)
+                    return
+                }
+        }
+    }
+
 
     private func requestUrl(path: String) -> String {
         return "https://" + baseURL + path
