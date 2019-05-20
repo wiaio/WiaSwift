@@ -530,7 +530,7 @@ open class Wia {
                           method: .get,
                           parameters: params,
                           headers: self.generateHeaders()
-            ).validate().responseArray(keyPath: "devices") { (response: DataResponse<[Event]>) in
+            ).validate().responseArray(keyPath: "events") { (response: DataResponse<[Event]>) in
                 debugPrint(response)
                 
                 switch response.result {
