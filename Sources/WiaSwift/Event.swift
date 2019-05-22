@@ -27,6 +27,9 @@ public class Event: Mappable  {
     /// The timestamp of this Event
     public var timestamp: Date?
 
+    /// The raw timestamp of this Event
+    public var timestampRaw: String?
+
     // Constructor
     init(id: String? = nil, name: String? = nil, data: Any? = nil, file: Any? = nil, timestamp: Date? = nil) {
         self.id = id
@@ -49,6 +52,7 @@ public class Event: Mappable  {
         name <- map["name"]
         data <- map["data"]
         file <- map["file"]
+        timestampRaw <- map["timestamp"]
         
         let timestampNum = Int(String(describing: map["timestamp"]))
         
