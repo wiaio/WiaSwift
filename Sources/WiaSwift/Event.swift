@@ -54,10 +54,10 @@ public class Event: Mappable  {
         file <- map["file"]
         timestampRaw <- map["timestamp"]
         
-        let timestampNum = Int(String(describing: map["timestamp"]))
+        let timestampBuf = (map["timestamp"], MilisecondDateTransform())
         
-        if (timestampNum != nil) {
-            timestamp <- (map["timestamp"], MilisecondDateTransform())
+        if (timestampBuf != nil) {
+            timestamp <- timestampBuf
         } else {
             timestamp <- (map["timestamp"], NativeISO8601DateTransform())
         }
