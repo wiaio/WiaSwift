@@ -50,12 +50,10 @@ open class Location: Mappable  {
         longitude <- map["longitude"]
         altitude <- map["altitude"]
         
-        let timestampNum = Int(String(describing: map["timestamp"]))
-        
-        if (timestampNum != nil) {
-            timestamp <- (map["timestamp"], MilisecondDateTransform())
-        } else {
+        if (String(describing: map["timestamp"]).contains(":")) {
             timestamp <- (map["timestamp"], NativeISO8601DateTransform())
+        } else {
+            timestamp <- (map["timestamp"], MilisecondDateTransform())
         }
     }
 }
