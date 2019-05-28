@@ -513,6 +513,38 @@ open class Wia {
     }
     
     // Events
+    public func createEvent(deviceSecretKey: String,
+                            name: String,
+                            data: Any?,
+                            onSuccess success: @escaping (Event) -> Void,
+                            onFailure failure: @escaping (WiaError) -> Void) {
+        var parameters: Parameters = [
+            "name": name,
+            "data": data
+        ]
+        
+        var headers: HTTPHeaders = self.generateHeaders()
+        headers["Authorization"] = "Bearer " + deviceSecretKey
+
+        Alamofire.request(requestUrl(path: "/events"),
+                          method: .post,
+                          parameters: parameters,
+                          encoding: JSONEncoding.default,
+                          headers: headers
+            ).validate().responseObject { (response: DataResponse<Event>) in
+                switch response.result {
+                case .success:
+                    let event = response.result.value!
+                    success(event)
+                    return
+                case .failure:
+                    let wiaError = WiaError(status: response.response?.statusCode)
+                    failure(wiaError)
+                    return
+                }
+        }
+    }
+
     public func listEvents(deviceId: String,
                             limit: Int? = nil,
                             page: Int? = nil,
@@ -537,6 +569,44 @@ open class Wia {
                 case .success:
                     let events = response.result.value!
                     success(events, events.count)
+                    return
+                case .failure:
+                    let wiaError = WiaError(status: response.response?.statusCode)
+                    failure(wiaError)
+                    return
+                }
+        }
+    }
+
+    // Locations
+    public func createLocation(deviceSecretKey: String,
+                               latitude: Double,
+                               longitude: Double,
+                               altitude: Double?,
+                               onSuccess success: @escaping (Location) -> Void,
+                               onFailure failure: @escaping (WiaError) -> Void) {
+        var parameters: Parameters = [
+            "latitude": latitude,
+            "longitude": longitude
+        ]
+        
+        if let alt = altitude {
+            parameters["altitude"] = alt
+        }
+
+        var headers: HTTPHeaders = self.generateHeaders()
+        headers["Authorization"] = "Bearer " + deviceSecretKey
+        
+        Alamofire.request(requestUrl(path: "/locations"),
+                          method: .post,
+                          parameters: parameters,
+                          encoding: JSONEncoding.default,
+                          headers: headers
+            ).validate().responseObject { (response: DataResponse<Location>) in
+                switch response.result {
+                case .success:
+                    let location = response.result.value!
+                    success(location)
                     return
                 case .failure:
                     let wiaError = WiaError(status: response.response?.statusCode)
