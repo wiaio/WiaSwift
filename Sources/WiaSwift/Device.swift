@@ -28,7 +28,7 @@ open class Device: Mappable {
     public var location: Location?
     
     /// The state of this Device
-    public var state: Any?
+    public var state: [String: DeviceState]?
 
     // Constructor
     init(id: String? = nil, name: String? = nil, type: DeviceType? = nil) {
@@ -52,5 +52,41 @@ open class Device: Mappable {
         events <- map["events"]
         location <- map["location"]
         state <- map["state"]
+    }
+}
+
+open class DeviceState: Mappable {
+    
+    /// The key of the state
+    public var key: String?
+    
+    /// The value of the state
+    public var value: String?
+
+    /// The updated at of the state
+    public var updatedAt: Date?
+
+    // Constructor
+    init(key: String? = nil, value: String? = nil) {
+        self.value = value
+    }
+    
+    public required init?(){
+        
+    }
+    
+    public required init?(map: Map){
+        
+    }
+    
+    public func mapping(map: Map) {
+        value <- map["key"]
+        value <- map["value"]
+
+        if (String(describing: map["updatedAt"]).contains(":")) {
+            updatedAt <- (map["updatedAt"], NativeISO8601DateTransform())
+        } else {
+            updatedAt <- (map["updatedAt"], MilisecondDateTransform())
+        }
     }
 }
