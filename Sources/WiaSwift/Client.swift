@@ -552,7 +552,7 @@ open class Wia {
                             data: Any?,
                             onSuccess success: @escaping (Event) -> Void,
                             onFailure failure: @escaping (WiaError) -> Void) {
-        var parameters: Parameters = [
+        let parameters: Parameters = [
             "name": name,
             "data": data
         ]
@@ -592,6 +592,52 @@ open class Wia {
         
         let eventsEndpoint: String = requestUrl(path: "/events");
 
+        Alamofire.request(eventsEndpoint,
+                          method: .get,
+                          parameters: params,
+                          headers: self.generateHeaders()
+            ).validate().responseArray(keyPath: "events") { (response: DataResponse<[Event]>) in
+                debugPrint(response)
+                
+                switch response.result {
+                case .success:
+                    let events = response.result.value!
+                    success(events, events.count)
+                    return
+                case .failure:
+                    let wiaError = WiaError(status: response.response?.statusCode)
+                    failure(wiaError)
+                    return
+                }
+        }
+    }
+    
+    public func queryEvents(deviceId: String,
+                            name: String,
+                            since: Int,
+                            until: Int? = nil,
+                            aggregateFunction: String? = "none",
+                            resolution: String? = nil,
+                            sort: String? = "desc",
+                           limit: Int? = 1000,
+                           page: Int? = 0,
+                           onSuccess success: @escaping ([Event],Int?) -> Void,
+                           onFailure failure: @escaping (WiaError) -> Void) {
+        
+        let params: Parameters = [
+            "device.id": deviceId,
+            "name": name,
+            "since": since as Any,
+            "until": until as Any,
+            "aggregateFunction": aggregateFunction as Any,
+            "resolution": resolution as Any,
+            "sort": sort as Any,
+            "limit": limit as Any,
+            "page": page as Any
+            ]
+        
+        let eventsEndpoint: String = requestUrl(path: "/events/query");
+        
         Alamofire.request(eventsEndpoint,
                           method: .get,
                           parameters: params,
