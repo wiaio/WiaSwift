@@ -187,6 +187,40 @@ open class Wia {
         }
     }
     
+    public func updateDevice(deviceId: String,
+                             name: String? = nil,
+                             state: [String: String]? = nil,
+                             onSuccess success: @escaping (Device) -> Void,
+                             onFailure failure: @escaping (WiaError) -> Void) {
+        var parameters: Parameters = [:]
+        
+        if (name != nil) {
+            parameters["name"] = name
+        }
+        
+        if (state != nil) {
+            parameters["state"] = state
+        }
+
+        Alamofire.request(requestUrl(path: "/devices/" + deviceId),
+                          method: .put,
+                          parameters: parameters,
+                          encoding: JSONEncoding.default,
+                          headers: self.generateHeaders()
+            ).validate().responseObject { (response: DataResponse<Device>) in
+                switch response.result {
+                case .success:
+                    let device = response.result.value!
+                    success(device)
+                    return
+                case .failure:
+                    let wiaError = WiaError(status: response.response?.statusCode)
+                    failure(wiaError)
+                    return
+                }
+        }
+    }
+
     public func listDevices(spaceId: String,
                     limit: Int? = nil,
                     page: Int? = nil,
