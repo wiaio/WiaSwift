@@ -520,17 +520,24 @@ open class Wia {
     }
     
     // Widgets
-    public func listWidgets(deviceId: String,
+    public func listWidgets(deviceId: String? = nil,
+                            productId: String? = nil,
                              limit: Int? = nil,
                              page: Int? = nil,
                              onSuccess success: @escaping ([Widget],Int?) -> Void,
                              onFailure failure: @escaping (WiaError) -> Void) {
         
-        let params = ["device.id": deviceId]
-        
+        var parameters: Parameters = [:]
+
+        if deviceId != nil {
+            parameters["device.id"] = deviceId
+        } else if productId != nil {
+            parameters["product.id"] = productId
+        }
+
         Alamofire.request(requestUrl(path: "/widgets"),
                           method: .get,
-                          parameters: params,
+                          parameters: parameters,
                           headers: self.generateHeaders()
             ).validate().responseArray(keyPath: "widgets") { (response: DataResponse<[Widget]>) in
                 switch response.result {
@@ -580,15 +587,30 @@ open class Wia {
     }
 
     public func listEvents(deviceId: String,
+                           name: String? = nil,
+                           since: Int? = nil,
+                           until: Int? = nil,
                             limit: Int? = nil,
                             page: Int? = nil,
                             onSuccess success: @escaping ([Event],Int?) -> Void,
                             onFailure failure: @escaping (WiaError) -> Void) {
         
-        let params = [
+        var params: Parameters = [
             "device.id": deviceId,
-            "limit": limit != nil ? "\(String(describing: limit))" : "100"
+            "limit": limit ?? 250
             ]
+        
+        if name != nil {
+            params["name"] = name
+        }
+        
+        if since != nil {
+            params["since"] = since
+        }
+
+        if until != nil {
+            params["until"] = until
+        }
         
         let eventsEndpoint: String = requestUrl(path: "/events");
 
@@ -615,34 +637,34 @@ open class Wia {
     public func queryEvents(deviceId: String,
                             name: String,
                             since: Int,
-                            until: Int? = nil,
-                            aggregateFunction: String? = "none",
-                            resolution: String? = nil,
-                            sort: String? = "desc",
-                           limit: Int? = 1000,
-                           page: Int? = 0,
-                           onSuccess success: @escaping ([Event],Int?) -> Void,
+                            until: Int,
+                            aggregateFunction: String,
+                            resolution: String,
+                            sort: String,
+                           limit: Int,
+                           page: Int,
+                           onSuccess success: @escaping ([EventQuery],Int?) -> Void,
                            onFailure failure: @escaping (WiaError) -> Void) {
         
         let params: Parameters = [
             "device.id": deviceId,
             "name": name,
-            "since": since as Any,
-            "until": until as Any,
-            "aggregateFunction": aggregateFunction as Any,
-            "resolution": resolution as Any,
-            "sort": sort as Any,
-            "limit": limit as Any,
-            "page": page as Any
+            "since": since,
+            "until": until,
+            "aggregateFunction": aggregateFunction,
+            "resolution": resolution,
+            "sort": sort,
+            "limit": limit,
+            "page": page
             ]
-        
+
         let eventsEndpoint: String = requestUrl(path: "/events/query");
         
         Alamofire.request(eventsEndpoint,
                           method: .get,
                           parameters: params,
                           headers: self.generateHeaders()
-            ).validate().responseArray(keyPath: "events") { (response: DataResponse<[Event]>) in
+            ).validate().responseArray(keyPath: "result") { (response: DataResponse<[EventQuery]>) in
                 debugPrint(response)
                 
                 switch response.result {

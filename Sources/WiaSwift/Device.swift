@@ -21,6 +21,9 @@ open class Device: Mappable {
     /// The device type
     public var type: DeviceType?
 
+    /// The product
+    public var product: Product?
+
     /// The events of this Device
     public var events: [Event]?
 
@@ -49,6 +52,7 @@ open class Device: Mappable {
         id <- map["id"]
         name <- map["name"]
         type <- map["type"]
+        product <- map["product"]
         events <- map["events"]
         location <- map["location"]
         state <- map["state"]

@@ -107,6 +107,8 @@ open class WidgetConfig: Mappable {
     
     public var aggregateFunction: String?
     
+    public var lineChartEvents: [String]?
+    
     // Constructor
 //    init() {
 //    }
@@ -129,6 +131,7 @@ open class WidgetConfig: Mappable {
         staticImage <- map["staticImage"]
         timePeriod <- map["timePeriod"]
         aggregateFunction <- map["aggregateFunction"]
+        lineChartEvents <- map["lineChartEvents"]
     }
 }
 
