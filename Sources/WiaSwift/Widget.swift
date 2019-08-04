@@ -83,14 +83,30 @@ open class WidgetType: Mappable {
 
 open class WidgetConfig: Mappable {
     
+    // All
+    public var dataType: String?
+    
+    public var order: Int?
+    
+    // Events
     public var eventName: String?
     
+    // State
+    public var stateKey: String?
+    
+    // Text
     public var eventUnit: String?
     
+    public var color: String?
+
+    // Image
+    public var staticImage: String?
+    
+    // Line chart
     public var timePeriod: String?
     
     public var aggregateFunction: String?
-
+    
     // Constructor
 //    init() {
 //    }
@@ -104,8 +120,13 @@ open class WidgetConfig: Mappable {
     }
     
     public func mapping(map: Map) {
+        dataType <- map["dataType"]
+        order <- map["order"]
         eventName <- map["eventName"]
+        stateKey <- map["stateKey"]
         eventUnit <- map["eventUnit"]
+        color <- map["color"]
+        staticImage <- map["staticImage"]
         timePeriod <- map["timePeriod"]
         aggregateFunction <- map["aggregateFunction"]
     }
